@@ -1,6 +1,6 @@
 {
     "key": "group_65d7a77ceb861",
-    "title": "[Opcje]Cennik",
+    "title": "Cennik",
     "fields": [
         {
             "key": "field_65d7a7e796b5f",
@@ -142,7 +142,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "pricing"
+                "value": "options"
             }
         ]
     ],
@@ -170,5 +170,5 @@
     "active": true,
     "description": "pricing",
     "show_in_rest": 1,
-    "modified": 1708695551
+    "modified": 1708972885
 }
