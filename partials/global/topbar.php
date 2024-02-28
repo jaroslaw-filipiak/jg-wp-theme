@@ -80,7 +80,7 @@ $theme_dir = get_theme_file_uri();
             <!-- switcher -->
 
             <!-- TODO: animacje svg -->
-            <a href=" #" class="btn btn--dark btn--pricing__animation pricing__trigger">
+            <div class="cursor-pointer btn btn--dark btn--pricing__animation pricing__trigger">
                 <span>Cennik</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="13" viewBox="0 0 20 13">
                     <g id="Cennik_Icon" transform="translate(-135 -24)">
@@ -88,11 +88,12 @@ $theme_dir = get_theme_file_uri();
                             <rect width="20" height="13" stroke="none" />
                             <rect x="0.75" y="0.75" width="18.5" height="11.5" fill="none" />
                         </g>
+
                         <line class="line__transform" id="Line_9" data-name="Line 9" x2="11" fill="none" stroke="#f9f2e5" stroke-width="1.5" />
                     </g>
                 </svg>
 
-            </a>
+            </div>
 
             <a href="<?php echo get_home_url('', 'kontakt') ?>" class="btn btn--red whitespace-nowrap">
                 <span>Zamów projekt</span>

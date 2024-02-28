@@ -24,7 +24,7 @@ $is_home = is_front_page() || is_home();
     <link rel="icon" type="image/svg+xml" href="<?php echo $theme_dir ?>/logo.svg" />
 
     <!-- global styles -->
-    <link rel="stylesheet" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/swiper-bundle.css">
+    <link rel="stylesheet" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/global-module.css">
 
     <!-- pricing -->
     <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/modulepreload-polyfill.js">

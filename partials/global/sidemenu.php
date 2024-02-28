@@ -38,19 +38,19 @@ $theme_dir = get_theme_file_uri();
 
         <ul>
             <li class="parent dark:text-light text-[18px]">
-                <a href="<?php echo get_home_url('', 'projektowanie-logo') ?>"> Projekt logo</a>
+                <a href="<?php echo get_home_url('', 'projektowanie-logo') ?>">Projekt logo</a>
             </li>
         </ul>
 
         <ul>
             <li class="parent dark:text-light text-[18px]">
-                <a href="<?php echo get_home_url('', 'projekty-reklamowe') ?>"> Projekty reklamowe</a>
+                <a href="<?php echo get_home_url('', 'projekty-reklamowe') ?>">Projekty reklamowe</a>
             </li>
         </ul>
 
         <ul>
             <li class="parent dark:text-light text-[18px]">
-                <a href="<?php echo get_home_url('', 'strony-internetowe') ?>"> Strony internetowe</a>
+                <a href="<?php echo get_home_url('', 'strony-internetowe') ?>">Strony internetowe</a>
             </li>
         </ul>
 

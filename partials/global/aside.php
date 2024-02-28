@@ -38,7 +38,7 @@ $theme_dir = get_theme_file_uri();
 
     <!-- aside bottom  -->
     <div>
-        <p class="text-gray text-[14px]">All Right Reserved <br /> © 2017 - 2024</p>
+        <p class="text-gray text-[14px]">All Right Reserved <br /> © 2017 - <?php echo get_the_date('Y') ?></p>
     </div>
 
 

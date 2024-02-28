@@ -10,6 +10,9 @@
  * @package grafikonline
  */
 
+$fb_link = get_field('facebook', 'option');
+$linkedin_link = get_field('linkedin', 'option');
+
 ?>
 
 <footer class="footer">
@@ -28,7 +31,7 @@
 					<div class="flex flex-col ">
 						<!-- privacy policy -->
 						<li class="group">
-							<a class="lg:whitespace-nowrap flex flex-row-reverse lg:flex-row w-full justify-between lg:justify-start items-center gap-[22px]" href="#">
+							<a target="_blank" href="<?php echo get_privacy_policy_url() ?>" class="lg:whitespace-nowrap flex flex-row-reverse lg:flex-row w-full justify-between lg:justify-start items-center gap-[22px]">
 								<!-- svg for desktop -->
 								<svg class="relative transition-all hidden lg:block  left-0 group-hover:left-[5px]" xmlns="http://www.w3.org/2000/svg" width="5.305" height="8.897" viewBox="0 0 5.305 8.897">
 									<path id="Link_Icon" d="M7.687,0,4.095,3.592h0L.5,0,0,.5l4.1,4.1L8.19.5Z" transform="translate(0.354 8.543) rotate(-90)" fill="#f9f2e5" stroke="#f9f2e5" stroke-width="0.5" />
@@ -44,7 +47,7 @@
 
 						<!--jaroslaw.grycaj.pl -->
 						<li class="group">
-							<a class="lg:whitespace-nowrap flex flex-row-reverse lg:flex-row w-full justify-between lg:justify-start items-center gap-[22px]" href="#">
+							<a target="_blank" href="https://www.jaroslaw.grycaj.pl" class="lg:whitespace-nowrap flex flex-row-reverse lg:flex-row w-full justify-between lg:justify-start items-center gap-[22px]">
 								<!-- svg for desktop -->
 								<svg class="relative transition-all hidden lg:block  left-0 group-hover:left-[5px]" xmlns="http://www.w3.org/2000/svg" width="5.305" height="8.897" viewBox="0 0 5.305 8.897">
 									<path id="Link_Icon" d="M7.687,0,4.095,3.592h0L.5,0,0,.5l4.1,4.1L8.19.5Z" transform="translate(0.354 8.543) rotate(-90)" fill="#f9f2e5" stroke="#f9f2e5" stroke-width="0.5" />
@@ -62,7 +65,7 @@
 					<div class="xl:pl-10 2xl:pl-20">
 						<!--facebook -->
 						<li class="group">
-							<a class="lg:whitespace-nowrap flex flex-row-reverse lg:flex-row w-full justify-between lg:justify-start items-center gap-[22px]" href="#">
+							<a class="lg:whitespace-nowrap flex flex-row-reverse lg:flex-row w-full justify-between lg:justify-start items-center gap-[22px]" href="<?php echo $fb_link ?>">
 								<!-- svg for desktop -->
 								<svg class="hidden lg:flex fill-red stroke-red group-hover:left-[5px] relative left-0 transition-all" xmlns="http://www.w3.org/2000/svg" width="5.305" height="8.897" viewBox="0 0 5.305 8.897">
 									<path id="Link_Icon" d="M7.687,0,4.095,3.592h0L.5,0,0,.5l4.1,4.1L8.19.5Z" transform="translate(0.354 8.543) rotate(-90)" stroke-width="0.5"></path>
@@ -78,7 +81,7 @@
 
 						<!--linkedin -->
 						<li class="group">
-							<a class="lg:whitespace-nowrap flex flex-row-reverse lg:flex-row w-full justify-between lg:justify-start items-center gap-[22px]" href="#">
+							<a class="lg:whitespace-nowrap flex flex-row-reverse lg:flex-row w-full justify-between lg:justify-start items-center gap-[22px]" href="<?php echo $linkedin_link ?>">
 								<!-- svg for desktop -->
 								<svg class="hidden lg:flex fill-red stroke-red group-hover:left-[5px] relative left-0 transition-all" xmlns="http://www.w3.org/2000/svg" width="5.305" height="8.897" viewBox="0 0 5.305 8.897">
 									<path id="Link_Icon" d="M7.687,0,4.095,3.592h0L.5,0,0,.5l4.1,4.1L8.19.5Z" transform="translate(0.354 8.543) rotate(-90)" stroke-width="0.5"></path>
@@ -101,13 +104,13 @@
 		<div class="w-full xl:w-4/12  2xl:w-full 2xl:min-w-[488px] 2xl:max-w-[488px] mt-[36px] lg:mt-0 lg:pl-10 xl:pl-20 2xl:pl-[124px] xl:border-r-2 xl:border-dark">
 			<h3 class="text-[18px] text-light mb-[24px] xl:text-[20px] xl:mb-[93px]">Oferta</h3>
 			<ul class="footer__links mb-[24px]">
-				<li class="group"><a class="flex items-center gap-[22px] group-hover:text-red group-hover:underline" href="#"><svg class="hidden xl:flex fill-red stroke-red group-hover:left-[5px] relative left-0 transition-all" xmlns="http://www.w3.org/2000/svg" width="5.305" height="8.897" viewBox="0 0 5.305 8.897">
+				<li class="group"><a class="flex items-center gap-[22px] group-hover:text-red group-hover:underline" href="<?php echo get_home_url('', 'projektowanie-logo') ?>"><svg class="hidden xl:flex fill-red stroke-red group-hover:left-[5px] relative left-0 transition-all" xmlns="http://www.w3.org/2000/svg" width="5.305" height="8.897" viewBox="0 0 5.305 8.897">
 							<path id="Link_Icon" d="M7.687,0,4.095,3.592h0L.5,0,0,.5l4.1,4.1L8.19.5Z" transform="translate(0.354 8.543) rotate(-90)" stroke-width="0.5" />
 						</svg>Projektowanie Logo</a></li>
-				<li class="group"><a class="flex items-center gap-[22px] group-hover:text-red group-hover:underline" href=" #"><svg class="hidden xl:flex fill-red stroke-red group-hover:left-[5px] relative left-0 transition-all" xmlns="http://www.w3.org/2000/svg" width="5.305" height="8.897" viewBox="0 0 5.305 8.897">
+				<li class="group"><a class="flex items-center gap-[22px] group-hover:text-red group-hover:underline" href=" <?php echo get_home_url('', 'projekty-reklamowe') ?>"><svg class="hidden xl:flex fill-red stroke-red group-hover:left-[5px] relative left-0 transition-all" xmlns="http://www.w3.org/2000/svg" width="5.305" height="8.897" viewBox="0 0 5.305 8.897">
 							<path id="Link_Icon" d="M7.687,0,4.095,3.592h0L.5,0,0,.5l4.1,4.1L8.19.5Z" transform="translate(0.354 8.543) rotate(-90)" stroke-width="0.5" />
 						</svg>Projekty reklamowe</a></li>
-				<li class="group"><a class="flex items-center gap-[22px] group-hover:text-red group-hover:underline" href="websites.html"><svg class="hidden xl:flex fill-red stroke-red group-hover:left-[5px] relative left-0 transition-all" xmlns="http://www.w3.org/2000/svg" width="5.305" height="8.897" viewBox="0 0 5.305 8.897">
+				<li class="group"><a class="flex items-center gap-[22px] group-hover:text-red group-hover:underline" href="<?php echo get_home_url('', 'strony-internetowe') ?>"><svg class="hidden xl:flex fill-red stroke-red group-hover:left-[5px] relative left-0 transition-all" xmlns="http://www.w3.org/2000/svg" width="5.305" height="8.897" viewBox="0 0 5.305 8.897">
 							<path id="Link_Icon" d="M7.687,0,4.095,3.592h0L.5,0,0,.5l4.1,4.1L8.19.5Z" transform="translate(0.354 8.543) rotate(-90)" stroke-width="0.5" />
 						</svg>Strony internetowe</a></li>
 			</ul>
@@ -120,7 +123,7 @@
 				PN - PT - 9:00 - 16:00</p>
 			<div class="xl:mt-[56px]">
 
-				<a href="/kontakt.html" class="btn btn--red whitespace-nowrap max-lg:max-h-[40px] max-xl:mt-[24px] max-lg:w-full max-lg:rounded-[2px] xl:min-w-[234px]">
+				<a href="<?php echo get_home_url('', 'kontakt') ?>" class="btn btn--red whitespace-nowrap max-lg:max-h-[40px] max-xl:mt-[24px] max-lg:w-full max-lg:rounded-[2px] xl:min-w-[234px]">
 					<span>Zamów projekt</span>
 
 					<svg width="14.819" height="14.819" viewBox="0 0 14.819 14.819">
