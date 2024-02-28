@@ -37,7 +37,7 @@ $theme_dir = get_theme_file_uri();
         <div class="desktop-menu on-scroll-initial hidden xl:flex items-center lg:w-6/12 xl:w-7/12 2xl:w-6/12 lg:pl-16 xl:pl-0 translate-y-0 transition-all">
             <ul class="w-full flex lg:gap-[8px] xl:gap-[38px] 2xl:gap-[68px] h-full items-center">
 
-                <li class="relative fluid-text-base has-submenu group "><span class="cursor-pointer transition-all relative top-0 group-hover:-top-1 pointer-events-none">Studio</span>
+                <li class="relative fluid-text-base has-submenu group "><a href="<?php echo get_home_url() ?>" class="cursor-pointer transition-all relative top-0 group-hover:-top-1 ">Studio</a>
                     <ul class="submenu overflow-hidden transition-all absolute bottom-0  translate-y-[100%] hidden group-hover:flex group-hover:opacity-100 ">
                         <li class="child group/child"><a href="<?php echo get_home_url('', 'o-firmie') ?>">O
                                 firmie <svg class="relative -left-3 opacity-0 transition-all group-hover/child:opacity-100 group-hover/child:left-0" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -57,9 +57,9 @@ $theme_dir = get_theme_file_uri();
                     </ul>
                 </li>
 
-                <li class="fluid-text-base group"><a class="transition-all relative top-0 group-hover:-top-1 " href="#">Projekt
+                <li class="fluid-text-base group"><a class="transition-all relative top-0 group-hover:-top-1 " href="<?php echo get_home_url('', 'projektowanie-logo') ?>">Projekt
                         Logo</a></li>
-                <li class="fluid-text-base group"><a class="transition-all relative top-0 group-hover:-top-1 " href="#">Projekty
+                <li class="fluid-text-base group"><a class="transition-all relative top-0 group-hover:-top-1 " href="<?php echo get_home_url('', 'projekty-reklamowe') ?>">Projekty
                         Reklamowe</a></li>
                 <li class="fluid-text-base group"><a class="transition-all relative top-0 group-hover:-top-1 " href="<?php echo get_home_url('', 'strony-internetowe') ?>">Strony
                         Internetowe</a></li>

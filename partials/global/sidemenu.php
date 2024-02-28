@@ -30,52 +30,28 @@ $theme_dir = get_theme_file_uri();
 
             <div class="submenu h-0 overflow-hidden transition-all ">
                 <li class="child"><a href="<?php echo get_home_url('', 'o-firmie') ?>">O firmie</a></li>
-                <li class="child">Kontakt</li>
-                <li class="child">Aktualności</li>
-                <li class="child">Kariera</li>
+                <li class="child"><a href="<?php echo get_home_url('', 'kontakt') ?>">Kontakt</a></li>
+                <!-- <li class=" child">Aktualności</li>
+                <li class="child">Kariera</li> -->
             </div>
         </ul>
 
         <ul>
             <li class="parent dark:text-light text-[18px]">
-                Projekt logo
+                <a href="<?php echo get_home_url('', 'projektowanie-logo') ?>"> Projekt logo</a>
             </li>
-
-            <div class="submenu mt-[14px]" style="display: none;">
-                <li class="child"><a href="<?php echo get_home_url('', 'o-firmie') ?>">O firmie</a></li>
-                <li class="child">Kontakt</li>
-                <li class="child">Aktualności</li>
-                <li class="child">Kariera</li>
-
-            </div>
         </ul>
 
         <ul>
             <li class="parent dark:text-light text-[18px]">
-                Projekty reklamowe
+                <a href="<?php echo get_home_url('', 'projekty-reklamowe') ?>"> Projekty reklamowe</a>
             </li>
-
-            <div class="submenu mt-[14px]" style="display: none;">
-                <li class="child"><a href="<?php echo get_home_url('', 'o-firmie') ?>">O firmie</a></li>
-                <li class="child">Kontakt</li>
-                <li class="child">Aktualności</li>
-                <li class="child">Kariera</li>
-
-            </div>
         </ul>
 
         <ul>
             <li class="parent dark:text-light text-[18px]">
-                Strony internetowe
+                <a href="<?php echo get_home_url('', 'strony-internetowe') ?>"> Strony internetowe</a>
             </li>
-
-            <div class="submenu mt-[14px]" style="display: none;">
-                <li class="child"><a href="<?php echo get_home_url('', 'o-firmie') ?>">O firmie</a></li>
-                <li class="child">Kontakt</li>
-                <li class="child">Aktualności</li>
-                <li class="child">Kariera</li>
-
-            </div>
         </ul>
 
     </div>

@@ -21,6 +21,7 @@ $is_home = is_front_page() || is_home();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link rel="icon" type="image/svg+xml" href="<?php echo $theme_dir ?>/logo.svg" />
 
     <!-- global styles -->
     <link rel="stylesheet" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/swiper-bundle.css">
@@ -56,8 +57,8 @@ $is_home = is_front_page() || is_home();
         <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/swiper-bundle.js">
     <?php endif; ?>
 
-    <!--  landing websites -->
-    <?php if (is_page_template('page-templates/landing-websites.php')) : ?>
+    <!--  landings -->
+    <?php if (is_page_template('page-templates/landing-websites.php') || is_page_template('page-templates/landing-projects.php') || is_page_template('page-templates/landing-logo.php')) : ?>
         <script type="module" crossorigin src="<?php echo get_theme_file_uri() ?>/dist/js/websites.js"></script>
 
         <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/pricing-module.js">
