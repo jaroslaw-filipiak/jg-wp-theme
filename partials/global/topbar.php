@@ -37,7 +37,7 @@ $theme_dir = get_theme_file_uri();
         <div class="desktop-menu on-scroll-initial hidden xl:flex items-center lg:w-6/12 xl:w-7/12 2xl:w-6/12 lg:pl-16 xl:pl-0 translate-y-0 transition-all">
             <ul class="w-full flex lg:gap-[8px] xl:gap-[38px] 2xl:gap-[68px] h-full items-center">
 
-                <li class="relative fluid-text-base has-submenu group"><a class="transition-all relative top-0 group-hover:-top-1 " href="#">Studio</a>
+                <li class="relative fluid-text-base has-submenu group "><span class="cursor-pointer transition-all relative top-0 group-hover:-top-1 pointer-events-none">Studio</span>
                     <ul class="submenu overflow-hidden transition-all absolute bottom-0  translate-y-[100%] hidden group-hover:flex group-hover:opacity-100 ">
                         <li class="child group/child"><a href="<?php echo get_home_url('', 'o-firmie') ?>">O
                                 firmie <svg class="relative -left-3 opacity-0 transition-all group-hover/child:opacity-100 group-hover/child:left-0" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -46,9 +46,14 @@ $theme_dir = get_theme_file_uri();
                                     <path d="M13 18l6 -6" />
                                     <path d="M13 6l6 6" />
                                 </svg></a></li>
-                        <li class="child"><a href="kontakt.html">Kontakt</a></li>
-                        <li class="child"><a href="#">Aktualności</a></li>
-                        <li class="child"><a href="#">Kariera</a></li>
+                        <li class="child group/child"><a href="<?php echo get_home_url('', 'kontakt') ?>">Kontakt <svg class="relative -left-3 opacity-0 transition-all group-hover/child:opacity-100 group-hover/child:left-0" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M5 12l14 0" />
+                                    <path d="M13 18l6 -6" />
+                                    <path d="M13 6l6 6" />
+                                </svg></a></li>
+                        <!-- <li class="child"><a href="#">Aktualności</a></li> -->
+                        <!-- <li class="child"><a href="#">Kariera</a></li> -->
                     </ul>
                 </li>
 
@@ -56,7 +61,7 @@ $theme_dir = get_theme_file_uri();
                         Logo</a></li>
                 <li class="fluid-text-base group"><a class="transition-all relative top-0 group-hover:-top-1 " href="#">Projekty
                         Reklamowe</a></li>
-                <li class="fluid-text-base group"><a class="transition-all relative top-0 group-hover:-top-1 " href="websites.html">Strony
+                <li class="fluid-text-base group"><a class="transition-all relative top-0 group-hover:-top-1 " href="<?php echo get_home_url('', 'strony-internetowe') ?>">Strony
                         Internetowe</a></li>
             </ul>
         </div>
@@ -89,7 +94,7 @@ $theme_dir = get_theme_file_uri();
 
             </a>
 
-            <a href="/kontakt.html" class="btn btn--red whitespace-nowrap">
+            <a href="<?php echo get_home_url('', 'kontakt') ?>" class="btn btn--red whitespace-nowrap">
                 <span>Zamów projekt</span>
 
                 <svg width="14.819" height="14.819" viewBox="0 0 14.819 14.819">

@@ -46,9 +46,25 @@ $is_home = is_front_page() || is_home();
         <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/swiper-bundle.js">
         <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/accordion.min.js">
 
-
-
     <?php endif; ?>
+
+    <!--  contact page template -->
+    <?php if (is_page_template('page-templates/contact.php')) : ?>
+        <script type="module" crossorigin src="<?php echo get_theme_file_uri() ?>/dist/js/contact.js"></script>
+
+        <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/modulepreload-polyfill.js">
+        <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/swiper-bundle.js">
+    <?php endif; ?>
+
+    <!--  landing websites -->
+    <?php if (is_page_template('page-templates/landing-websites.php')) : ?>
+        <script type="module" crossorigin src="<?php echo get_theme_file_uri() ?>/dist/js/websites.js"></script>
+
+        <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/pricing-module.js">
+        <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/global-module.js">
+        <link rel="stylesheet" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/global-module.css">
+    <?php endif; ?>
+
 
     <?php wp_head(); ?>
 </head>
