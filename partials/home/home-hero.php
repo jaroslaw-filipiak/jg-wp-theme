@@ -13,12 +13,9 @@ $theme_dir = get_theme_file_uri();
 ?>
 
 <section class="aside-offset__margin">
+
     <h1 class="fluid-text-5xl">
-        Tworzymy
-        <span class="dark:text-red  dark:lg:dark:text-light text-lightmode_textlg:text-[#1e1e1e]">Projekty
-            Graficzne Online
-            <br /></span>
-        Dbamy o Wizualną Jakość Twojej Firmy
+        <?php the_field( 'hero_heading' ); ?>
     </h1>
 
     <div
@@ -27,8 +24,14 @@ $theme_dir = get_theme_file_uri();
             class="flex md:flex-row-reverse  items-center justify-center md:justify-end gap-[10px] lg:gap-[28px] w-full lg:w-5/12 ">
 
             <!-- cennik -->
-            <a href="#" class="btn btn--dark max-md:w-full whitespace-nowrap group">
-                <span>Cennik</span>
+            <?php $hero_btn_pricing = get_field( 'hero_btn_pricing' ); ?>
+            <?php if ( $hero_btn_pricing ) : ?>
+
+            <?php endif; ?>
+            <a href="<?php echo esc_url( $hero_btn_pricing['url'] ); ?>"
+                target="<?php echo esc_attr( $hero_btn_pricing['target'] ); ?>"
+                class="btn btn--dark max-md:w-full whitespace-nowrap group">
+                <span><?php echo esc_html( $hero_btn_pricing['title'] ); ?></span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="13" viewBox="0 0 20 13">
                     <g id="Cennik_Icon" transform="translate(-135 -24)">
                         <g id="Rectangle_18" data-name="Rectangle 18" transform="translate(135 24)" fill="none"
@@ -36,8 +39,6 @@ $theme_dir = get_theme_file_uri();
                             <rect width="20" height="13" stroke="none" />
                             <rect x="0.75" y="0.75" width="18.5" height="11.5" fill="none" />
                         </g>
-                        <!-- <line class="line__transform" id="Line_9" data-name="Line 9" x2="11" fill="none" stroke="#f9f2e5"
-                  stroke-width="1.5" /> -->
                         <line id="Line_9" data-name="Line 9" x2="11" transform="translate(139.5 29.5)" fill="none"
                             class="dark:stroke-[#f9f2e5] stroke-[#1E1E1E] group-hover:stroke-light" stroke-width="1.5">
                         </line>
@@ -46,8 +47,13 @@ $theme_dir = get_theme_file_uri();
             </a>
 
             <!-- zamow projekt -->
-            <a href="#" class="btn btn--red max-md:w-full whitespace-nowrap">
-                <span>Zamów projekt</span>
+            <?php $hero_btn_order_project = get_field( 'hero_btn_order_project' ); ?>
+            <?php if ( $hero_btn_order_project ) : ?>
+
+            <a href="<?php echo esc_url( $hero_btn_order_project['url'] ); ?>"
+                target="<?php echo esc_attr( $hero_btn_order_project['target'] ); ?>"
+                class="btn btn--red max-md:w-full whitespace-nowrap">
+                <span><?php echo esc_html( $hero_btn_order_project['title'] ); ?></span>
                 <svg width="14.819" height="14.819" viewBox="0 0 14.819 14.819">
                     <g id="Edit_Icon" transform="translate(-779.261 -1011.304)">
                         <line id="Line_8" data-name="Line 8" x2="6.294" transform="translate(787.786 1024.145)"
@@ -62,6 +68,8 @@ $theme_dir = get_theme_file_uri();
                     </g>
                 </svg>
             </a>
+            <?php endif; ?>
+
 
         </div>
 
@@ -70,22 +78,24 @@ $theme_dir = get_theme_file_uri();
          w-full lg:w-7/12 mt-[70px] md:mt-0 max-w-[680px]">
 
             <p class="text-[14px] dark:text-gray text-lightmode_9f hidden xl:flex text-nowrap xl:pr-[62px]">
-                Narzędzia i technologia:
+                <?php the_field( 'technologies_title' ); ?>
             </p>
+
+            <?php 
+            $images = get_field('technologies_icons');
+            
+            if( $images ): ?>
+
             <ul class="flex items-center justify-between w-full gap-3 sm:gap-4 lg:gap-6">
-                <li><img class="max-lg:w-[14px]" src="<?php echo $theme_dir ?>/dist/icons/ps.svg" alt=""></li>
-                <li><img class="max-lg:w-[14px]" src="<?php echo $theme_dir ?>/dist/icons/ai.svg" alt=""></li>
-                <li><img class="max-lg:w-[14px]" src="<?php echo $theme_dir ?>/dist/icons/id.svg" alt=""></li>
-                <li><img class="max-lg:w-[14px]" src="<?php echo $theme_dir ?>/dist/icons/ae.svg" alt=""></li>
-                <li><img class="max-lg:w-[14px]" src="<?php echo $theme_dir ?>/dist/icons/xd.svg" alt=""></li>
-                <li><img class="max-lg:w-[14px]" src="<?php echo $theme_dir ?>/dist/icons/blender.svg" alt=""></li>
-                <li><img class="max-lg:w-[14px]" src="<?php echo $theme_dir ?>/dist/icons/hotjar.svg" alt=""></li>
-                <li><img class="max-lg:w-[14px]" src="<?php echo $theme_dir ?>/dist/icons/meet.svg" alt=""></li>
-                <li><img class="max-lg:w-[14px]" src="<?php echo $theme_dir ?>/dist/icons/drive.svg" alt=""></li>
-                <li><img class="max-lg:w-[14px]" src="<?php echo $theme_dir ?>/dist/icons/gmail.svg" alt=""></li>
-                <li><img class="max-lg:w-[14px]" src="<?php echo $theme_dir ?>/dist/icons/wordpress.svg" alt=""></li>
-                <li><img class="max-lg:w-[14px]" src="<?php echo $theme_dir ?>/dist/icons/gpt.svg" alt=""></li>
+                <?php foreach( $images as $image ): ?>
+
+                <li><img class="max-lg:w-[14px]" src="<?php echo esc_url($image['sizes']['thumbnail']); ?>"
+                        alt="<?php echo esc_attr($image['alt']); ?>">
+                </li>
+
+                <?php endforeach; ?>
             </ul>
+            <?php endif; ?>
         </div>
 
     </div>

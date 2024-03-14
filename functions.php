@@ -209,3 +209,12 @@ add_action("rest_api_init", function () {
 });
 
 // add_filter('wpcf7_validate_configuration', '__return_false');
+
+function enable_svg_upload( $upload_mimes ) {
+
+    $upload_mimes['svg'] = 'image/svg+xml';
+    $upload_mimes['svgz'] = 'image/svg+xml';
+    return $upload_mimes;
+}
+
+add_filter( 'upload_mimes', 'enable_svg_upload', 10, 1 );
