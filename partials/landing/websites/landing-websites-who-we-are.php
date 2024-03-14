@@ -70,9 +70,9 @@ $theme_dir = get_theme_file_uri();
                 <!-- accordions -->
 
                 <div class="accordion-container xl:mt-[112px] max-lg:mt-[12px]">
-                    <div class="ac">
+                    <div class="ac group">
                         <h2 class="ac-header">
-                            <button type="button" class="ac-trigger ">
+                            <button type="button" class="ac-trigger group ">
                                 <span class="max-lg:w-10/12 flex">Nowoczesne podejście do klienta</span>
                             </button>
                         </h2>
@@ -101,9 +101,9 @@ $theme_dir = get_theme_file_uri();
                         </div>
                     </div>
 
-                    <div class="ac">
+                    <div class="ac group">
                         <h2 class="ac-header">
-                            <button type="button" class="ac-trigger"> <span class="max-lg:w-10/12 flex">Nowoczesne
+                            <button type="button" class="ac-trigger group"> <span class="max-lg:w-10/12 flex">Nowoczesne
                                     podejście
                                     do
                                     klienta</span></button>
@@ -131,9 +131,9 @@ $theme_dir = get_theme_file_uri();
                         </div>
                     </div>
 
-                    <div class="ac">
+                    <div class="ac group">
                         <h2 class="ac-header">
-                            <button type="button" class="ac-trigger"> <span class="max-lg:w-10/12 flex">Nowoczesne
+                            <button type="button" class="ac-trigger group"> <span class="max-lg:w-10/12 flex">Nowoczesne
                                     podejście
                                     do
                                     klienta</span></button>
@@ -161,9 +161,9 @@ $theme_dir = get_theme_file_uri();
                         </div>
                     </div>
 
-                    <div class="ac">
+                    <div class="ac group">
                         <h2 class="ac-header">
-                            <button type="button" class="ac-trigger ">
+                            <button type="button" class="ac-trigger group ">
                                 <span class="max-lg:w-10/12 flex">Nowoczesne podejście do klienta</span>
                             </button>
                         </h2>

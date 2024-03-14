@@ -16,7 +16,7 @@ $theme_dir = get_theme_file_uri();
 
     <div class="lg:pr-14 xl:pr-0 aside-offset__margin">
         <div class="divider-with-text flex items-center mt-8 lg:mt-20 xl:mt-[104px]">
-            <p class=" text-light  w-full lg:w-auto flex text-[16px] lg:fluid-text-2xl lg:pr-[65px] lg:whitespace-nowrap">
+            <p class=" dark:text-light text-lightmode_text w-full lg:w-auto flex text-[16px] lg:fluid-text-2xl lg:pr-[65px] lg:whitespace-nowrap">
                 Mamy doświadczenie we współpracy z:
             </p>
             <div class="border-[1px] border-gray w-full hidden lg:flex"></div>

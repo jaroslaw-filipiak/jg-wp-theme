@@ -16,7 +16,7 @@ $theme_dir = get_theme_file_uri();
     <!-- TODO: icons -->
     <div class="pricing__wrapper max-w-full">
         <div class="pricing__content relative">
-            <div class="pricing__top text-light flex flex-col items-center bg-dark pt-4 pb-4 pl-5 pr-5 lg:pl-10 lg:pr-10">
+            <div class="pricing__top dark:text-light text-lightmode_text flex flex-col items-center bg-dark pt-4 pb-4 pl-5 pr-5 lg:pl-10 lg:pr-10">
                 <div class="pricing__info-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -38,7 +38,7 @@ $theme_dir = get_theme_file_uri();
                     </svg></div>
             </div>
             <div class="pricing__search bg-darkMain lg:pl-10 lg:pr-10">
-                <input class="w-full placeholder-gray placeholder:text-[14px] text-[14px] text-center lg:text-left placeholder:text-center lg:placeholder:text-start lg:pl-6 pt-[14px] pb-[14px] bg-dark lg:bg-dark3 rounded-[8px] border-dark border-[2px] pricing__searchbox" type="text" placeholder="Filtruj po nazwie">
+                <input class="w-full placeholder-gray placeholder:text-[14px] text-[14px] text-center lg:text-left placeholder:text-center lg:placeholder:text-start lg:pl-6 pt-[14px] pb-[14px] bg-dark dark:lg:bg-dark3 lg:bg-lightmode_f9 rounded-[8px] dark:border-dark border-lightmode_ef border-[2px] pricing__searchbox" type="text" placeholder="Filtruj po nazwie">
             </div>
             <!-- loop -->
             <!-- TODO: szczególy usługi toggle zwiń -->
@@ -46,7 +46,7 @@ $theme_dir = get_theme_file_uri();
                 <!-- item if no results -->
 
                 <div class="no-results no-results__hidden" data-selected="false">
-                    <span class="text-light text-[16px] lg:text-[20px] flex">Nie znaleziono...</span>
+                    <span class="dark:text-light text-lightmode_texttext-[16px] lg:text-[20px] flex">Nie znaleziono...</span>
                 </div>
                 <!-- item -->
 
@@ -56,11 +56,11 @@ $theme_dir = get_theme_file_uri();
             <div class="pricing__footer hidden bg-dark  items-center justify-between pt-4 pb-4 pl-7 pr-7  lg:absolute lg:left-0 lg:bottom-0 lg:w-full">
                 <div class="flex items-center  gap-7 pl-3">
                     <p class="text-[14px] text-dark2">Twoje zamówienie</p>
-                    <p class="text-[20px] text-light pricing__count"><span class="val"></span> PLN <span class="inline-block pl-1 text-[12px] text-dark2">netto</span></p>
+                    <p class="text-[20px] dark:text-light text-lightmode_textpricing__count"><span class="val"></span> PLN <span class="inline-block pl-1 text-[12px] text-dark2">netto</span></p>
                 </div>
                 <a class="bg-light rounded-full pl-7 pr-7 xl:pl-[17px] xl:pr-[27px] pt-[13px] pb-[13px] 2xl:pl-[37px] 2xl:pr-[33px hover:bg-red transition-all group xl:mr-[35px]" href="#
  ">
-                    <div class="text-[#1E1E1E] group-hover:text-light transition-all flex items-center  justify-center  gap-6 text-[16px] font-medium  ]">
+                    <div class="text-[#1E1E1E] group-hover:dark:text-light text-lightmode_texttransition-all flex items-center  justify-center  gap-6 text-[16px] font-medium  ]">
                         Zamów
                         <div>
                             <svg class="-rotate-90 w-[11px]" xmlns="http://www.w3.org/2000/svg" width="14.993" height="14.993" viewBox="0 0 14.993 14.993">

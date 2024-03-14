@@ -35,7 +35,7 @@ $theme_dir = get_theme_file_uri();
 
     <!-- subtitle -->
     <div class="landing-hero__subtitle">
-        <p class="text-light text-[14px] lg:text-[16px] xl:max-w-[708px]">
+        <p class="dark:text-light text-lightmode_texttext-[14px] lg:text-[16px] xl:max-w-[708px]">
             Dzięki nam Twoja marka stanie się rozpoznawalna i zacznie budzić konkretne, oczekiwane skojarzenia u
             odbiorców.</p>
     </div>
@@ -99,7 +99,7 @@ $theme_dir = get_theme_file_uri();
     <div class="divider-with-text flex items-center mt-8 ">
         <p class="text-[14px] text-gray min-w-[90px] flex lg:hidden">Zjedź niżej </p>
         <p class="text-[14px] text-gray hidden lg:flex w-[190px]">Zjedź niżej po więcej </p>
-        <div class="border-[1px] border-dark w-full"></div>
+        <div class="border-[1px] dark:border-dark border-lightmode_ef w-full"></div>
         <div class="pl-6">
             <img class="lg:min-w-[14px]" src="arrow-down.svg" alt="">
         </div>

@@ -84,7 +84,7 @@ $theme_dir = get_theme_file_uri();
                         rozwój studia oraz nadzoruję pracę moich podwykonawców. Każdy projekt, który trafia do klienta
                         uprzednio weryfikuję w trosce o zapewnienie najwyższej jakości.
                     </p>
-                    <div class="divider border-b-[2px] border-dark lg:hidden max-lg:mt-[24px]"></div>
+                    <div class="divider border-b-[2px] dark:border-dark border-lightmode_ef lg:hidden max-lg:mt-[24px]"></div>
                 </div>
             </div>
         </div>

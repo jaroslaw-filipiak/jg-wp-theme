@@ -78,7 +78,7 @@ if (have_rows('person', 'option')) : $i = 0; ?>
                             <div class="text-[14px] text-red pl-[18px] "><?php echo $role ?></div>
                         </div>
                         <div class="mt-8">
-                            <p class="text-light text-[16px]"><?php echo $excerpt ?></p>
+                            <p class="dark:text-light text-lightmode_texttext-[16px]"><?php echo $excerpt ?></p>
                         </div>
                     </div>
                 </div>

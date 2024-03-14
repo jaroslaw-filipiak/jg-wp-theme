@@ -191,15 +191,21 @@ if (defined('JETPACK__VERSION')) {
 /**
  * ACF rest API endpoint for pricing
  */
-function acf_options_route()
-{
-	return get_field('pricing', 'options');
-}
+
 
 add_action("rest_api_init", function () {
 	register_rest_route("options", "/pricing", [
 		"methods" => "GET",
-		"callback" => "acf_options_route",
+		"callback" => function ($request) {
+			$data = get_field('pricing', 'options');
+			$modified_data = array_map(function ($item, $index) {
+				$item['id'] = $index; // Add ID 
+				return $item;
+			}, $data, array_keys($data));
+			return $modified_data;
+		},
 		'permission_callback' => '__return_true'
 	]);
 });
+
+// add_filter('wpcf7_validate_configuration', '__return_false');

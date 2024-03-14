@@ -42,7 +42,7 @@ $theme_dir = get_theme_file_uri();
                             <span class="text-red">autorski
                                 system online.</span>
                         </p>
-                        <div class="divider border-b-[2px] border-dark lg:hidden max-lg:mt-[24px]"></div>
+                        <div class="divider border-b-[2px] dark:border-dark border-lightmode_ef lg:hidden max-lg:mt-[24px]"></div>
                         <p class="hidden lg:block">&nbsp;</p><br />
 
                         <p class="text-[14px] lg:fluid-text-base hidden lg:flex">Godziny pracy studia: <span class="text-red pl-3">PN - PT - 9:00

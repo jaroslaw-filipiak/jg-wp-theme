@@ -16,7 +16,8 @@ $theme_dir = get_theme_file_uri();
     <div class="aside-offset__margin">
         <div>
 
-            <h3 class="fluid-text-3xl lg:fluid-text-4-717rem grid__title pt-[20px] xl:pt-0 pb-[36px]  max-w-[1440px] lg:pb-[50px] xl:pb-[70px] ">
+            <h3
+                class="fluid-text-3xl lg:fluid-text-4-717rem grid__title pt-[20px] xl:pt-0 pb-[36px]  max-w-[1440px] lg:pb-[50px] xl:pb-[70px] ">
                 <span class="text-red"> Jakie korzyści</span> płyną z dobrze <br /> zaprojektowanej strony lub sklepu
                 internetowego?
 
@@ -31,9 +32,9 @@ $theme_dir = get_theme_file_uri();
             <!-- accordions -->
 
             <div class="accordion-container accordion-container__landing">
-                <div class="ac">
+                <div class="ac group">
                     <h2 class="ac-header">
-                        <button type="button" class="ac-trigger ">
+                        <button type="button" class="ac-trigger group">
                             <span class="max-lg:w-10/12 flex">Pewnego partnera do współpracy</span>
                         </button>
                     </h2>
@@ -60,9 +61,9 @@ $theme_dir = get_theme_file_uri();
                     </div>
                 </div>
 
-                <div class="ac">
+                <div class="ac group">
                     <h2 class="ac-header">
-                        <button type="button" class="ac-trigger ">
+                        <button type="button" class="ac-trigger group ">
                             <span class="max-lg:w-10/12 flex">Pewnego partnera do współpracy</span>
                         </button>
                     </h2>
@@ -89,9 +90,9 @@ $theme_dir = get_theme_file_uri();
                     </div>
                 </div>
 
-                <div class="ac">
+                <div class="ac group">
                     <h2 class="ac-header">
-                        <button type="button" class="ac-trigger ">
+                        <button type="button" class="ac-trigger group ">
                             <span class="max-lg:w-10/12 flex">Pewnego partnera do współpracy</span>
                         </button>
                     </h2>

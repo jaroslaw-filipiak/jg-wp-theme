@@ -31,9 +31,9 @@ $theme_dir = get_theme_file_uri();
             <!-- accordions -->
 
             <div class="accordion-container__2">
-                <div class="ac">
+                <div class="ac group">
                     <h2 class="ac-header">
-                        <button type="button" class="ac-trigger ">
+                        <button type="button" class="ac-trigger group ">
                             <span class="max-lg:w-10/12 flex">Pewnego partnera do współpracy</span>
                         </button>
                     </h2>
@@ -59,9 +59,9 @@ $theme_dir = get_theme_file_uri();
                     </div>
                 </div>
 
-                <div class="ac">
+                <div class="ac group">
                     <h2 class="ac-header">
-                        <button type="button" class="ac-trigger ">
+                        <button type="button" class="ac-trigger group ">
                             <span class="max-lg:w-10/12 flex">Pewnego partnera do współpracy</span>
                         </button>
                     </h2>
@@ -87,9 +87,9 @@ $theme_dir = get_theme_file_uri();
                     </div>
                 </div>
 
-                <div class="ac">
+                <div class="ac group">
                     <h2 class="ac-header">
-                        <button type="button" class="ac-trigger ">
+                        <button type="button" class="ac-trigger group ">
                             <span class="max-lg:w-10/12 flex">Pewnego partnera do współpracy</span>
                         </button>
                     </h2>

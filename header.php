@@ -31,39 +31,39 @@ $is_home = is_front_page() || is_home();
 
     <!-- front page -->
     <?php if (is_front_page() || is_home()) : ?>
-        <script type="module" crossorigin src="<?php echo get_theme_file_uri() ?>/dist/js/main.js"></script>
+    <script type="module" crossorigin src="<?php echo get_theme_file_uri() ?>/dist/js/main.js"></script>
 
-        <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/swiper-bundle.js">
-        <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/accordion.min.js">
-        <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/clamp.js">
+    <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/swiper-bundle.js">
+    <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/accordion.min.js">
+    <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/clamp.js">
 
     <?php endif; ?>
 
     <!-- about page template -->
     <?php if (is_page_template('page-templates/about.php')) : ?>
-        <script type="module" crossorigin src="<?php echo get_theme_file_uri() ?>/dist/js/about.js"></script>
+    <script type="module" crossorigin src="<?php echo get_theme_file_uri() ?>/dist/js/about.js"></script>
 
-        <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/modulepreload-polyfill.js">
-        <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/swiper-bundle.js">
-        <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/accordion.min.js">
+    <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/modulepreload-polyfill.js">
+    <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/swiper-bundle.js">
+    <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/accordion.min.js">
 
     <?php endif; ?>
 
     <!--  contact page template -->
     <?php if (is_page_template('page-templates/contact.php')) : ?>
-        <script type="module" crossorigin src="<?php echo get_theme_file_uri() ?>/dist/js/contact.js"></script>
+    <script type="module" crossorigin src="<?php echo get_theme_file_uri() ?>/dist/js/contact.js"></script>
 
-        <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/modulepreload-polyfill.js">
-        <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/swiper-bundle.js">
+    <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/modulepreload-polyfill.js">
+    <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/swiper-bundle.js">
     <?php endif; ?>
 
     <!--  landings -->
     <?php if (is_page_template('page-templates/landing-websites.php') || is_page_template('page-templates/landing-projects.php') || is_page_template('page-templates/landing-logo.php')) : ?>
-        <script type="module" crossorigin src="<?php echo get_theme_file_uri() ?>/dist/js/websites.js"></script>
+    <script type="module" crossorigin src="<?php echo get_theme_file_uri() ?>/dist/js/websites.js"></script>
 
-        <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/pricing-module.js">
-        <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/global-module.js">
-        <link rel="stylesheet" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/global-module.css">
+    <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/pricing-module.js">
+    <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/global-module.js">
+    <link rel="stylesheet" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/global-module.css">
     <?php endif; ?>
 
 
@@ -83,13 +83,15 @@ $is_home = is_front_page() || is_home();
 
     </header>
 
-    <section class="content dark:text-light flex items-start justify-start relative <?php echo $is_home ? 'pt-[50px]' : 'pt-[60px] lg:pt-[128px]' ?> ">
+    <section
+        class="content dark:dark:text-light text-lightmode_text flex items-start justify-start relative <?php echo $is_home ? 'pt-[50px]' : 'pt-[60px] lg:pt-[128px]' ?> ">
 
         <!-- aside -->
         <?php get_template_part('partials/global/aside'); ?>
 
         <!-- pt conditionally -->
-        <main class="<?php echo $is_home ? 'pt-[93px] lg:pt-[171px] z-50 w-full max-w-[100vw] overflow-hidden' : 'z-50 w-full main-not-homepage' ?>">
+        <main
+            class="<?php echo $is_home ? 'pt-[93px] lg:pt-[171px] z-50 w-full max-w-[100vw] overflow-hidden' : 'z-50 w-full main-not-homepage' ?>">
 
             <!-- breadcrumbs -->
             <?php $is_home ? null : get_template_part('partials/global/breadcrumbs'); ?>

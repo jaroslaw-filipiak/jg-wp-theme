@@ -26,7 +26,7 @@ $theme_dir = get_theme_file_uri();
         <div class="accordion-container accordion-container__about">
             <div class="ac js-enabled" id="ac-0">
                 <h2 class="ac-header">
-                    <button type="button" class="ac-trigger " id="ac-trigger-0" role="button" aria-controls="ac-panel-0" aria-disabled="false" aria-expanded="false">
+                    <button type="button" class="ac-trigger group " id="ac-trigger-0" role="button" aria-controls="ac-panel-0" aria-disabled="false" aria-expanded="false">
                         <span class="max-lg:w-10/12 flex">Pewnego partnera do współpracy</span>
                     </button>
                 </h2>
@@ -51,7 +51,7 @@ $theme_dir = get_theme_file_uri();
 
             <div class="ac js-enabled" id="ac-1">
                 <h2 class="ac-header">
-                    <button type="button" class="ac-trigger " id="ac-trigger-1" role="button" aria-controls="ac-panel-1" aria-disabled="false" aria-expanded="false">
+                    <button type="button" class="ac-trigger group " id="ac-trigger-1" role="button" aria-controls="ac-panel-1" aria-disabled="false" aria-expanded="false">
                         <span class="max-lg:w-10/12 flex">Pewnego partnera do współpracy</span>
                     </button>
                 </h2>
@@ -76,7 +76,7 @@ $theme_dir = get_theme_file_uri();
 
             <div class="ac js-enabled" id="ac-2">
                 <h2 class="ac-header">
-                    <button type="button" class="ac-trigger " id="ac-trigger-2" role="button" aria-controls="ac-panel-2" aria-disabled="false" aria-expanded="false">
+                    <button type="button" class="ac-trigger group " id="ac-trigger-2" role="button" aria-controls="ac-panel-2" aria-disabled="false" aria-expanded="false">
                         <span class="max-lg:w-10/12 flex">Pewnego partnera do współpracy</span>
                     </button>
                 </h2>

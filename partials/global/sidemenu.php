@@ -24,7 +24,7 @@ $theme_dir = get_theme_file_uri();
 
     <div class="flex flex-col gap-0">
         <ul class="mt-[66px]">
-            <li class="parent dark:text-light text-[18px]">
+            <li class="parent dark:text-light text-lightmode_text text-[18px]">
                 Studio
             </li>
 
@@ -37,19 +37,19 @@ $theme_dir = get_theme_file_uri();
         </ul>
 
         <ul>
-            <li class="parent dark:text-light text-[18px]">
+            <li class="parent dark:text-light text-lightmode_text text-[18px]">
                 <a href="<?php echo get_home_url('', 'projektowanie-logo') ?>">Projekt logo</a>
             </li>
         </ul>
 
         <ul>
-            <li class="parent dark:text-light text-[18px]">
+            <li class="parent dark:text-light text-lightmode_text text-[18px]">
                 <a href="<?php echo get_home_url('', 'projekty-reklamowe') ?>">Projekty reklamowe</a>
             </li>
         </ul>
 
         <ul>
-            <li class="parent dark:text-light text-[18px]">
+            <li class="parent dark:text-light text-lightmode_text text-[18px]">
                 <a href="<?php echo get_home_url('', 'strony-internetowe') ?>">Strony internetowe</a>
             </li>
         </ul>
