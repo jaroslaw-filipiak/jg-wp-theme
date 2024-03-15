@@ -5,13 +5,8 @@
 
 <?php get_template_part('partials/home/home-hero'); ?>
 
-<!-- first row portfolio -->
-<?php get_template_part('partials/home/portfolio-slider'); ?>
-<?php get_template_part('partials/home/portfolio-content-row'); ?>
-
-<!-- second row -->
-<?php get_template_part('partials/home/second-row-slider'); ?>
-<?php get_template_part('partials/home/second-row-content'); ?>
+<!-- repeater -->
+<?php get_template_part('partials/repeater/section'); ?>
 
 <!-- who we are -->
 <?php get_template_part('partials/home/who-we-are'); ?>

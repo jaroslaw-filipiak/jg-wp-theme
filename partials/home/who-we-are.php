@@ -22,25 +22,24 @@ $theme_dir = get_theme_file_uri();
                         <path id="Arrow_Icon" d="M0,0V8H8V7.018H1.677L7.994.7,7.3.006.983,6.323V0Z"
                             transform="translate(0 8) rotate(-90)" fill="#777777" />
                     </svg>
-                    <p class="text-[12px] lg:text-[14px]  text-gray uppercase font-medium ">Kim jestesmy ?</p>
+                    <p class="text-[12px] lg:text-[14px]  text-gray uppercase font-medium ">
+                        <?php the_field( 'who_we_are_label' ); ?></p>
                 </div>
             </div>
             <!-- label -->
             <h3
                 class="text-[20px] lg:fluid-text-3xl lg:fluid-text-4-717rem grid__title pt-[20px] xl:pt-0 pb-[36px]  max-w-[1440px] lg:pb-[150px] ">
-                Jesteśmy zespołem
-                praktyków z wieloletnim doświadczeniem projektowym <br class="hidden xl:block" />oraz wdrożeniowym.
-                <span class="text-red">Doskonale
-                    rozumiemy potrzeby klientów</span> i
-                oferujemy <br class="hidden xl:block" />dopasowane projekty, które realnie poprawiają wizualną jakość
-                firmy.
+                <?php the_field( 'who_we_are_heading' ); ?>
             </h3>
 
         </div>
         <div class="flex flex-col lg:items-stretch lg:flex-row lg:mt-5">
-            <div class="w-full  lg:w-5/12 xl:min-w-[586px] max-w-[586px]  ">
-                <!-- max-w-[586px] -->
-                <div class="w-full aspect-[1/1.087] dark:bg-dark bg-lightmode_ef rounded-lg"></div>
+            <div class="w-full  lg:w-5/12 xl:min-w-[586px] max-w-[586px]">
+                <?php $who_we_are_photo = get_field( 'who_we_are_photo' ); ?>
+                <?php if ( $who_we_are_photo ) : ?>
+                <div class="w-full aspect-[1/1.087] dark:bg-dark bg-lightmode_ef rounded-lg bg-cover bg-no-repeat bg-center"
+                    style="background-image: url(<?php echo esc_url( $who_we_are_photo['url'] ); ?>)"></div>
+                <?php endif; ?>
             </div>
             <div class="lg:w-7/12 lg:pl-[65px] xl:pl-[94px] mt-[36px] lg:mt-0">
                 <div class="flex items-center justify-between lg:-mt-[25px]">
@@ -51,15 +50,19 @@ $theme_dir = get_theme_file_uri();
                                 <path id="Arrow_Icon" d="M0,0V8H8V7.018H1.677L7.994.7,7.3.006.983,6.323V0Z"
                                     transform="translate(0 8) rotate(-90)" />
                             </svg>
-                            <p class="text-[12px] lg:text-[14px]  text-gray lg:text-red uppercase font-medium ">Nasze
-                                wartości
+                            <p class="text-[12px] lg:text-[14px]  text-gray lg:text-red uppercase font-medium ">
+                                <?php the_field( 'who_we_are_label' ); ?>
                             </p>
                         </div>
                     </div>
 
                     <div>
-                        <a href=" #" class="btn btn--dark max-md:w-full group">
-                            <span>O nas</span>
+                        <?php $who_we_are_btn = get_field( 'who_we_are_btn' ); ?>
+                        <?php if ( $who_we_are_btn ) : ?>
+                        <a href="<?php echo esc_url( $who_we_are_btn['url'] ); ?>"
+                            target="<?php echo esc_attr( $who_we_are_btn['target'] ); ?>"
+                            class="btn btn--dark max-md:w-full group">
+                            <span><?php echo esc_html( $who_we_are_btn['title'] ); ?></span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="13.708" height="10.219"
                                 viewBox="0 0 13.708 10.219">
                                 <g id="Więcej_Icon" transform="translate(-782.5 -1015.043)">
@@ -78,135 +81,41 @@ $theme_dir = get_theme_file_uri();
                                 </g>
                             </svg>
                         </a>
+                        <?php endif; ?>
                     </div>
                 </div>
 
                 <!-- accordions -->
 
                 <div class="accordion-container xl:mt-[112px] max-lg:mt-[12px]">
-                    <div class="ac group">
-                        <h2 class="ac-header">
-                            <button type="button" class="ac-trigger group ">
-                                <span class="max-lg:w-10/12 flex">Nowoczesne podejście do klienta</span>
-                            </button>
-                        </h2>
-                        <div class="ac-panel">
-                            <p class="ac-text fluid-text-lg">
-                                <img class="mt-[16px] mb-[16px] lg:hidden" src="icons/arrow_down_right.svg" alt="">
 
-                                11 Jako firma Boxmet Ltd. Sp. z o.o. współpracujemy ze Studiem GrafikOnline.PL od
-                                stosunkowo niedługiego czasu, jednak już zdążyliśmy się przekonać o jakości obsługi i
-                                profesjonaliźmie. Firma wykazała się kreatywnym i twórczym podejściem do realizacji
-                                projektu
-                                nowego katalogu produktowego. Nasza współpraca to nie tylko katalog, ale również
-                                stworzenie
-                                całej
-                                szaty graficznej firmy, a w jej obrębie tworzenie wielu projektów graficznych, takich
-                                jak banery
-                                na stronę www. Każdy z projektów spotyka się z naszą aprobatą, pomimo wysoko
-                                zawieszonych
-                                wymagań.
-                                To czyni współpracę łatwą i przyjemną, ale przede wszystkim w efekcie wpływa na
-                                pozytywny
-                                wizerunek firmy. Również projekty mniej typowe, spoza domyślnej oferty, są obsługiwane
-                                przez
-                                Studio Graficznej Jarosław Grycaj z pełnym zaangażowaniem. Zdecydowanie polecamy!
-                            </p>
-                        </div>
-                    </div>
+                    <?php if( have_rows('who_we_are_accordions') ): ?>
 
-                    <div class="ac group">
-                        <h2 class="ac-header">
-                            <button type="button" class="ac-trigger group"> <span class="max-lg:w-10/12 flex">Nowoczesne
-                                    podejście
-                                    do
-                                    klienta</span></button>
-                        </h2>
-                        <div class="ac-panel">
-                            <p class="ac-text fluid-text-lg"> <img class="mt-[16px] mb-[16px] lg:hidden"
-                                    src="icons/arrow_down_right.svg" alt="">22Jako firma Boxmet Ltd. Sp. z o.o.
-                                współpracujemy ze
-                                Studiem GrafikOnline.PL od
-                                stosunkowo niedługiego czasu, jednak już zdążyliśmy się przekonać o jakości obsługi i
-                                profesjonaliźmie. Firma wykazała się kreatywnym i twórczym podejściem do realizacji
-                                projektu
-                                nowego katalogu produktowego. Nasza współpraca to nie tylko katalog, ale również
-                                stworzenie
-                                całej
-                                szaty graficznej firmy, a w jej obrębie tworzenie wielu projektów graficznych, takich
-                                jak banery
-                                na stronę www. Każdy z projektów spotyka się z naszą aprobatą, pomimo wysoko
-                                zawieszonych
-                                wymagań.
-                                To czyni współpracę łatwą i przyjemną, ale przede wszystkim w efekcie wpływa na
-                                pozytywny
-                                wizerunek firmy. Również projekty mniej typowe, spoza domyślnej oferty, są obsługiwane
-                                przez
-                                Studio Graficznej Jarosław Grycaj z pełnym zaangażowaniem. Zdecydowanie polecamy!</p>
-                        </div>
-                    </div>
-
-                    <div class="ac group">
-                        <h2 class="ac-header">
-                            <button type="button" class="ac-trigger group"> <span class="max-lg:w-10/12 flex">Nowoczesne
-                                    podejście
-                                    do
-                                    klienta</span></button>
-                        </h2>
-                        <div class="ac-panel">
-                            <p class="ac-text fluid-text-lg"> <img class="mt-[16px] mb-[16px] lg:hidden"
-                                    src="icons/arrow_down_right.svg" alt="">Jako firma Boxmet Ltd. Sp. z o.o.
-                                współpracujemy ze
-                                Studiem GrafikOnline.PL od
-                                stosunkowo niedługiego czasu, jednak już zdążyliśmy się przekonać o jakości obsługi i
-                                profesjonaliźmie. Firma wykazała się kreatywnym i twórczym podejściem do realizacji
-                                projektu
-                                nowego katalogu produktowego. Nasza współpraca to nie tylko katalog, ale również
-                                stworzenie
-                                całej
-                                szaty graficznej firmy, a w jej obrębie tworzenie wielu projektów graficznych, takich
-                                jak banery
-                                na stronę www. Każdy z projektów spotyka się z naszą aprobatą, pomimo wysoko
-                                zawieszonych
-                                wymagań.
-                                To czyni współpracę łatwą i przyjemną, ale przede wszystkim w efekcie wpływa na
-                                pozytywny
-                                wizerunek firmy. Również projekty mniej typowe, spoza domyślnej oferty, są obsługiwane
-                                przez
-                                Studio Graficznej Jarosław Grycaj z pełnym zaangażowaniem. Zdecydowanie polecamy!</p>
-                        </div>
-                    </div>
+                    <?php while( have_rows('who_we_are_accordions') ): the_row(); 
+                        $title = get_sub_field('title');
+                        $content = get_sub_field('content');
+                        ?>
 
                     <div class="ac group">
                         <h2 class="ac-header">
                             <button type="button" class="ac-trigger group ">
-                                <span class="max-lg:w-10/12 flex">Nowoczesne podejście do klienta</span>
+                                <span class="max-lg:w-10/12 flex"><?php echo $title ?></span>
                             </button>
                         </h2>
                         <div class="ac-panel">
                             <p class="ac-text fluid-text-lg">
-                                <img class="mt-[16px] mb-[16px] lg:hidden" src="icons/arrow_down_right.svg" alt="">
-
-                                Jako firma Boxmet Ltd. Sp. z o.o. współpracujemy ze Studiem GrafikOnline.PL od
-                                stosunkowo niedługiego czasu, jednak już zdążyliśmy się przekonać o jakości obsługi i
-                                profesjonaliźmie. Firma wykazała się kreatywnym i twórczym podejściem do realizacji
-                                projektu
-                                nowego katalogu produktowego. Nasza współpraca to nie tylko katalog, ale również
-                                stworzenie
-                                całej
-                                szaty graficznej firmy, a w jej obrębie tworzenie wielu projektów graficznych, takich
-                                jak banery
-                                na stronę www. Każdy z projektów spotyka się z naszą aprobatą, pomimo wysoko
-                                zawieszonych
-                                wymagań.
-                                To czyni współpracę łatwą i przyjemną, ale przede wszystkim w efekcie wpływa na
-                                pozytywny
-                                wizerunek firmy. Również projekty mniej typowe, spoza domyślnej oferty, są obsługiwane
-                                przez
-                                Studio Graficznej Jarosław Grycaj z pełnym zaangażowaniem. Zdecydowanie polecamy!
+                                <img loading="lazy" class="mt-[16px] mb-[16px] lg:hidden"
+                                    src="<?php echo get_theme_file_uri() ?>/dist/icons/arrow_down_right.svg"
+                                    role="presentation">
+                                <?php echo $content ?>
                             </p>
                         </div>
                     </div>
+
+                    <?php endwhile; ?>
+
+                    <?php endif; ?>
+
                 </div>
 
                 <!-- accordions -->

@@ -22,7 +22,7 @@ $theme_dir = get_theme_file_uri();
         <div class="flex items-center w-full mt-[20px] lg:mt-0">
             <div class="border-[1px] dark:border-dark border-lightmode_ef w-full"></div>
             <div class="pl-6">
-                <img class="lg:min-w-[14px]" src="arrow-down.svg" alt="">
+                <img class="lg:min-w-[14px]" src="arrow-down.svg" role="presentation">
             </div>
         </div>
     </div>
@@ -30,15 +30,8 @@ $theme_dir = get_theme_file_uri();
     <div class="slider-row__swiper--testimonials overflow-hidden relative max-lg:pl-[24px] max-lg:pr-[24px]">
         <div
             class="testimonials__desktop-nav hidden lg:flex aside-offset__margin absolute left-0 top-1 w-full h-full  items-center justify-end">
-
-            <!-- <button class="w-[120px] h-[120px] dark:bg-dark bg-lightmode_ef rounded-full flex items-center justify-center z-20 relative left-[60px] group hover:bg-red hover:shadow-2xl swiper--testimonials--next">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14.993" height="14.993" viewBox="0 0 14.993 14.993" class="-rotate-90 fill-light relative left-0 transition-all group-hover:left-2">
-                    <path id="Arrow_Down" d="M0,0V10.6H10.6V9.3H2.223L10.594.929,9.674.008,1.3,8.38V0Z" transform="translate(0 7.496) rotate(-45)" />
-                </svg>
-
-            </button> -->
             <button
-                class="w-[120px] h-[120px] dark:bg-dark bg-lightmode_ef rounded-full flex items-center justify-center z-20 relative left-[60px] group hover:bg-red hover:shadow-2xl swiper--portfolio--next">
+                class="w-[120px] h-[120px] dark:bg-dark bg-lightmode_ef rounded-full flex items-center justify-center z-20 relative left-[60px] group hover:bg-red hover:shadow-2xl swiper--testimonials--next">
                 <svg xmlns="http://www.w3.org/2000/svg" width="14.993" height="14.993" viewBox="0 0 14.993 14.993"
                     class="-rotate-90 dark:fill-light fill-darkMain relative left-0 group-hover:fill-light transition-all group-hover:left-2">
                     <path id="Arrow_Down" d="M0,0V10.6H10.6V9.3H2.223L10.594.929,9.674.008,1.3,8.38V0Z"
