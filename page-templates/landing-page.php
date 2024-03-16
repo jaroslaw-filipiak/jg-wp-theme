@@ -5,7 +5,7 @@
 <?php get_template_part('partials/landing/landing-hero'); ?>
 <?php get_template_part('partials/landing/landing-slider'); ?>
 <?php get_template_part('partials/landing/landing-benefits'); ?>
-<?php get_template_part('partials/landing/landing-why-worth'); ?>
+<?php //  get_template_part('partials/landing/landing-why-worth'); ?>
 <?php get_template_part('partials/landing/landing-who-we-are'); ?>
 
 <!-- TODO: testimonials -->
