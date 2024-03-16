@@ -208,7 +208,11 @@ add_action("rest_api_init", function () {
 	]);
 });
 
-// add_filter('wpcf7_validate_configuration', '__return_false');
+
+/**
+ * ALLOW SVG
+ */
+
 
 function enable_svg_upload( $upload_mimes ) {
 
@@ -218,3 +222,11 @@ function enable_svg_upload( $upload_mimes ) {
 }
 
 add_filter( 'upload_mimes', 'enable_svg_upload', 10, 1 );
+
+
+
+/**
+ * CUSTOM POST TYPES
+ */
+
+ require get_template_directory() . '/inc/post-types.php';

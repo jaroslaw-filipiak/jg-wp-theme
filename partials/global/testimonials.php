@@ -22,10 +22,16 @@ $theme_dir = get_theme_file_uri();
         <div class="flex items-center w-full mt-[20px] lg:mt-0">
             <div class="border-[1px] dark:border-dark border-lightmode_ef w-full"></div>
             <div class="pl-6">
-                <img class="lg:min-w-[14px]" src="arrow-down.svg" role="presentation">
+                <svg width="14.993" height="14.993" viewBox="0 0 14.993 14.993">
+                    <path id="Arrow_Down" d="M0,0V10.6H10.6V9.3H2.223L10.594.929,9.674.008,1.3,8.38V0Z"
+                        transform="translate(0 7.496) rotate(-45)" fill="#777"></path>
+                </svg>
             </div>
         </div>
     </div>
+
+    <!-- </section> -->
+
 
     <div class="slider-row__swiper--testimonials overflow-hidden relative max-lg:pl-[24px] max-lg:pr-[24px]">
         <div
@@ -39,171 +45,58 @@ $theme_dir = get_theme_file_uri();
                 </svg>
             </button>
         </div>
-        <div class="testimonials swiper-wrapper ">
+        <div class="testimonials swiper-wrapper">
+
+            <?php
+        $testimonials = new WP_Query(array(
+            'post_type' => 'testimonial',
+            'posts_per_page' => -1,
+        ));
+
+        if ($testimonials->have_posts()) {
+            while ($testimonials->have_posts()) {
+                $testimonials->the_post();
+                ?>
+            <!-- loop -->
             <div
                 class="testimonial swiper-slide dark:lg:bg-dark3 lg:bg-lightmode_f9 flex flex-col-reverse lg:flex-col lg:pt-[54px] lg:pl-[51px] lg:pr-[51px] lg:pb-0 xl:max-w-[1196px]">
                 <div
                     class="testimonial__content text-[14px] lg:text-[20px] lg:leading-[36px] font-normal dark:text-light text-lightmode_textmt-[22px] lg:mt-0 lg:pb-[134px]">
-                    Jako firma Boxmet Ltd. Sp. z o.o. współpracujemy ze Studiem GrafikOnline.PL od stosunkowo
-                    niedługiego
-                    czasu, jednak już zdążyliśmy się przekonać o jakości obsługi i profesjonaliźmie. Firma wykazała się
-                    kreatywnym i twórczym podejściem do realizacji projektu nowego katalogu produktowego. Nasza
-                    współpraca
-                    to
-                    nie tylko katalog, ale również stworzenie całej szaty graficznej firmy, a w jej obrębie tworzenie
-                    wielu
-                    projektów graficznych, takich jak banery na stronę www. Każdy z projektów spotyka się z naszą
-                    aprobatą,
-                    pomimo wysoko zawieszonych wymagań. To czyni współpracę łatwą i przyjemną, ale przede wszystkim w
-                    efekcie
-                    wpływa na pozytywny wizerunek firmy. Również projekty mniej typowe, spoza domyślnej oferty, są
-                    obsługiwane
-                    przez Studio Graficznej Jarosław Grycaj z pełnym zaangażowaniem. Zdecydowanie polecamy!
+                    <?php echo the_content(); ?>
                 </div>
                 <div class="testimonial__footer flex flex-wrap mt-[24px] lg:mt-[0px]">
                     <div
                         class="text-gray text-[12px] lg:text-[14px] font-bold  lg:border-b-[1px] lg:dark:border-dark border-lightmode_ef w-6/12 lg:w-full order-2 lg:order-1 flex justify-end lg:justify-start lg:pb-[12px]">
                         <!-- TODO: Icon -->
-                        12.2020r.
+                        <?php echo get_the_date('Y-m-d') ?>
                     </div>
                     <div
                         class="max-lg:w-6/12 lg:flex-grow-4 lg:w-8/12  order-1 lg:items-center lg:justify-start lg:pt-[39px] lg:pb-[63px]">
-                        {logo}</div>
+                        <?php $logo = get_field( 'logo' ); ?>
+                        <?php if ( $logo ) : ?>
+                        <img class="testimonial__logo" loading="lazy" src="<?php echo esc_url( $logo['url'] ); ?>"
+                            alt="<?php echo esc_attr( $logo['alt'] ); ?>" />
+                        <?php endif; ?>
+                    </div>
                     <div
                         class="w-full max-lg:w-6/12 lg:flex-grow-1 lg:w-4/12  order-3 flex-grow-[2] mt-[24px] lg:mt-0 lg:pt-[39px] lg:pb-[63px] lg:pl-[70px] lg:justify-end lg:flex lg:flex-col lg:items-start">
                         <div
                             class="text-[12px] lg:text-[14px] lg:dark:text-light text-lightmode_textfont-bold text-gray">
-                            <p>Paweł Gryszan</p>
+                            <p><?php echo get_the_title() ?></p>
                         </div>
                         <div class="text-12 lg:text-[14px] font-normal lg:dark:text-light text-lightmode_texttext-gray">
-                            <p>Kierownik Działu Handlu i Marketingu</p>
+                            <p><?php the_field( 'position' ); ?></p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div
-                class="testimonial swiper-slide dark:lg:bg-dark3 lg:bg-lightmode_f9 flex flex-col-reverse lg:flex-col  lg:pt-[54px] lg:pl-[51px] lg:pr-[51px] lg:pb-0 xl:max-w-[1196px]">
-                <div
-                    class="testimonial__content text-[14px] lg:text-[20px] lg:leading-[36px] font-normal dark:text-light text-lightmode_textmt-[22px] lg:mt-0 lg:pb-[134px]">
-                    Jako firma Boxmet Ltd. Sp. z o.o. współpracujemy ze Studiem GrafikOnline.PL od stosunkowo
-                    niedługiego
-                    czasu, jednak już zdążyliśmy się przekonać o jakości obsługi i profesjonaliźmie. Firma wykazała się
-                    kreatywnym i twórczym podejściem do realizacji projektu nowego katalogu produktowego. Nasza
-                    współpraca
-                    to
-                    nie tylko katalog, ale również stworzenie całej szaty graficznej firmy, a w jej obrębie tworzenie
-                    wielu
-                    projektów graficznych, takich jak banery na stronę www. Każdy z projektów spotyka się z naszą
-                    aprobatą,
-                    pomimo wysoko zawieszonych wymagań. To czyni współpracę łatwą i przyjemną, ale przede wszystkim w
-                    efekcie
-                    wpływa na pozytywny wizerunek firmy. Również projekty mniej typowe, spoza domyślnej oferty, są
-                    obsługiwane
-                    przez Studio Graficznej Jarosław Grycaj z pełnym zaangażowaniem. Zdecydowanie polecamy!
-                </div>
-                <div class="testimonial__footer flex flex-wrap mt-[24px] lg:mt-[0px]">
-                    <div
-                        class="text-gray text-[12px] lg:text-[14px] font-bold  lg:border-b-[1px] lg:dark:border-dark border-lightmode_ef w-6/12 lg:w-full order-2 lg:order-1 flex justify-end lg:justify-start lg:pb-[12px]">
-                        <!-- TODO: Icon -->
-                        12.2020r.
-                    </div>
-                    <div
-                        class="max-lg:w-6/12 lg:flex-grow-4 lg:w-8/12  order-1 lg:items-center lg:justify-start lg:pt-[39px] lg:pb-[63px]">
-                        {logo}</div>
-                    <div
-                        class="w-full max-lg:w-6/12 lg:flex-grow-1 lg:w-4/12  order-3 flex-grow-[2] mt-[24px] lg:mt-0 lg:pt-[39px] lg:pb-[63px] lg:pl-[70px] lg:justify-end lg:flex lg:flex-col lg:items-start">
-                        <div
-                            class="text-[12px] lg:text-[14px] lg:dark:text-light text-lightmode_textfont-bold text-gray">
-                            <p>Paweł Gryszan</p>
-                        </div>
-                        <div class="text-12 lg:text-[14px] font-normal lg:dark:text-light text-lightmode_texttext-gray">
-                            <p>Kierownik Działu Handlu i Marketingu</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="testimonial swiper-slide dark:lg:bg-dark3 lg:bg-lightmode_f9 flex flex-col-reverse lg:flex-col  lg:pt-[54px] lg:pl-[51px] lg:pr-[51px] lg:pb-0 xl:max-w-[1196px]">
-                <div
-                    class="testimonial__content text-[14px] lg:text-[20px] lg:leading-[36px] font-normal dark:text-light text-lightmode_textmt-[22px] lg:mt-0 lg:pb-[134px]">
-                    Jako firma Boxmet Ltd. Sp. z o.o. współpracujemy ze Studiem GrafikOnline.PL od stosunkowo
-                    niedługiego
-                    czasu, jednak już zdążyliśmy się przekonać o jakości obsługi i profesjonaliźmie. Firma wykazała się
-                    kreatywnym i twórczym podejściem do realizacji projektu nowego katalogu produktowego. Nasza
-                    współpraca
-                    to
-                    nie tylko katalog, ale również stworzenie całej szaty graficznej firmy, a w jej obrębie tworzenie
-                    wielu
-                    projektów graficznych, takich jak banery na stronę www. Każdy z projektów spotyka się z naszą
-                    aprobatą,
-                    pomimo wysoko zawieszonych wymagań. To czyni współpracę łatwą i przyjemną, ale przede wszystkim w
-                    efekcie
-                    wpływa na pozytywny wizerunek firmy. Również projekty mniej typowe, spoza domyślnej oferty, są
-                    obsługiwane
-                    przez Studio Graficznej Jarosław Grycaj z pełnym zaangażowaniem. Zdecydowanie polecamy!
-                </div>
-                <div class="testimonial__footer flex flex-wrap mt-[24px] lg:mt-[0px]">
-                    <div
-                        class="text-gray text-[12px] lg:text-[14px] font-bold  lg:border-b-[1px] lg:dark:border-dark border-lightmode_ef w-6/12 lg:w-full order-2 lg:order-1 flex justify-end lg:justify-start lg:pb-[12px]">
-                        <!-- TODO: Icon -->
-                        12.2020r.
-                    </div>
-                    <div
-                        class="max-lg:w-6/12 lg:flex-grow-4 lg:w-8/12  order-1 lg:items-center lg:justify-start lg:pt-[39px] lg:pb-[63px]">
-                        {logo}</div>
-                    <div
-                        class="w-full max-lg:w-6/12 lg:flex-grow-1 lg:w-4/12  order-3 flex-grow-[2] mt-[24px] lg:mt-0 lg:pt-[39px] lg:pb-[63px] lg:pl-[70px] lg:justify-end lg:flex lg:flex-col lg:items-start">
-                        <div
-                            class="text-[12px] lg:text-[14px] lg:dark:text-light text-lightmode_textfont-bold text-gray">
-                            <p>Paweł Gryszan</p>
-                        </div>
-                        <div class="text-12 lg:text-[14px] font-normal lg:dark:text-light text-lightmode_texttext-gray">
-                            <p>Kierownik Działu Handlu i Marketingu</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="testimonial swiper-slide dark:lg:bg-dark3 lg:bg-lightmode_f9 flex flex-col-reverse lg:flex-col  lg:pt-[54px] lg:pl-[51px] lg:pr-[51px] lg:pb-0 xl:max-w-[1196px] ">
-                <div
-                    class="testimonial__content text-[14px] lg:text-[20px] lg:leading-[36px] font-normal dark:text-light text-lightmode_textmt-[22px] lg:mt-0 lg:pb-[134px]">
-                    Jako firma Boxmet Ltd. Sp. z o.o. współpracujemy ze Studiem GrafikOnline.PL od stosunkowo
-                    niedługiego
-                    czasu, jednak już zdążyliśmy się przekonać o jakości obsługi i profesjonaliźmie. Firma wykazała się
-                    kreatywnym i twórczym podejściem do realizacji projektu nowego katalogu produktowego. Nasza
-                    współpraca
-                    to
-                    nie tylko katalog, ale również stworzenie całej szaty graficznej firmy, a w jej obrębie tworzenie
-                    wielu
-                    projektów graficznych, takich jak banery na stronę www. Każdy z projektów spotyka się z naszą
-                    aprobatą,
-                    pomimo wysoko zawieszonych wymagań. To czyni współpracę łatwą i przyjemną, ale przede wszystkim w
-                    efekcie
-                    wpływa na pozytywny wizerunek firmy. Również projekty mniej typowe, spoza domyślnej oferty, są
-                    obsługiwane
-                    przez Studio Graficznej Jarosław Grycaj z pełnym zaangażowaniem. Zdecydowanie polecamy!
-                </div>
-                <div class="testimonial__footer flex flex-wrap mt-[24px] lg:mt-[0px]">
-                    <div
-                        class="text-gray text-[12px] lg:text-[14px] font-bold  lg:border-b-[1px] lg:dark:border-dark border-lightmode_ef w-6/12 lg:w-full order-2 lg:order-1 flex justify-end lg:justify-start lg:pb-[12px]">
-                        <!-- TODO: Icon -->
-                        12.2020r.
-                    </div>
-                    <div
-                        class="max-lg:w-6/12 lg:flex-grow-4 lg:w-8/12  order-1 lg:items-center lg:justify-start lg:pt-[39px] lg:pb-[63px]">
-                        {logo}</div>
-                    <div
-                        class="w-full max-lg:w-6/12 lg:flex-grow-1 lg:w-4/12  order-3 flex-grow-[2] mt-[24px] lg:mt-0 lg:pt-[39px] lg:pb-[63px] lg:pl-[70px] lg:justify-end lg:flex lg:flex-col lg:items-start">
-                        <div
-                            class="text-[12px] lg:text-[14px] lg:dark:text-light text-lightmode_textfont-bold text-gray">
-                            <p>Paweł Gryszan</p>
-                        </div>
-                        <div class="text-12 lg:text-[14px] font-normal lg:dark:text-light text-lightmode_texttext-gray">
-                            <p>Kierownik Działu Handlu i Marketingu</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- loop -->
+            <?php
+            }
+            wp_reset_postdata();
+        }
+        ?>
+
         </div>
 
     </div>
