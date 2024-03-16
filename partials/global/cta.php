@@ -16,18 +16,24 @@ $theme_dir = get_theme_file_uri();
     <div class="aside-offset__margin home-cta">
 
         <!-- photo -->
+
+        <?php 
+            $image = get_field('cta_photo', 'option');
+            if( !empty( $image ) ): ?>
+
         <div class="w-full lg:flex lg:w-full xxl:min-w-[586px] home-cta__photo">
-            <div class="w-full aspect-[1/1.111] dark:bg-red bg-lightmode_ef rounded-lg xl:max-w-[586px]"></div>
+            <div class="w-full aspect-[1/1.111] dark:bg-red bg-lightmode_ef rounded-lg xl:max-w-[586px] home-cta__photo__img"
+                style="background-image: url(<?php echo esc_url($image['url']); ?>)"></div>
         </div>
+
+        <?php endif; ?>
 
         <!-- title -->
         <div class="home-cta__title max-lg:pt-[10px]">
             <!-- jesteś gotowy na wspólprace -->
             <div class="lg:flex lg:items-center lg:justify-between max-xl:pb-[19px]">
                 <div class="flex flex-col items-start justify-between xl:pt-[16px]">
-                    <h1 class="text-[28px] lg:fluid-text-5xl max-w-[444px] ">Czy <span class="text-red">jesteś
-                            gotowy
-                        </span> na współpracę?
+                    <h1 class="text-[28px] lg:fluid-text-5xl max-w-[444px] "><?php the_field('cta_heading', 'option') ?>
                     </h1>
                 </div>
             </div>
@@ -38,8 +44,21 @@ $theme_dir = get_theme_file_uri();
             <div
                 class="flex items-start xl:items-center max-lg:justify-between gap-[14px] lg:gap-[14px] 2xl:gap-[32px] max-xl:order-4">
 
-                <a href="#" class="btn btn--dark max-md:w-full whitespace-nowrap btn--contact__animation group">
-                    <span>Kontakt</span>
+                <!-- contact btn -->
+                <?php 
+                
+                        $link_contact = get_field('cta_btn_contact', 'option');
+                        if( $link_contact ): 
+                            $link_contact_url = $link_contact['url'];
+                            $link_contact_title = $link_contact['title'];
+                            $link_contact_target = $link_contact['target'] ? $link_contact['target'] : '_self';
+                            ?>
+
+
+                <a href="<?php echo esc_url( $link_contact_url ); ?>"
+                    target="<?php echo esc_attr( $link_contact_target ); ?>"
+                    class="btn btn--dark max-md:w-full whitespace-nowrap btn--contact__animation group">
+                    <span><?php echo esc_html( $link_contact_title ); ?></span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="11.696" height="16.582" viewBox="0 0 11.696 16.582">
                         <g id="Phone_Icon" transform="translate(-451.164 -7759.324)">
                             <g id="Rectangle_75" data-name="Rectangle 75"
@@ -52,12 +71,24 @@ $theme_dir = get_theme_file_uri();
                                 stroke="#f9f2e5" stroke-width="1.5" />
                         </g>
                     </svg>
-
-
                 </a>
 
-                <a href=" #" class="max-lg:order-4 btn btn--red whitespace-nowrap max-lg:w-full ">
-                    <span>Zamów projekt</span>
+                <?php endif; ?>
+
+                <!-- order btn -->
+                <?php 
+                
+                        $link_order = get_field('cta_btn_order', 'option');
+                        if( $link_order ): 
+                            $link_order_url = $link_order['url'];
+                            $link_order_title = $link_order['title'];
+                            $link_order_target = $link_order['target'] ? $link_order['target'] : '_self';
+                            ?>
+
+                <a href="<?php echo esc_url( $link_order_url ); ?>"
+                    target="<?php echo esc_attr( $link_order_target ); ?>"
+                    class="max-lg:order-4 btn btn--red whitespace-nowrap max-lg:w-full ">
+                    <span><?php echo esc_html( $link_order_title ); ?></span>
 
                     <svg width="14.819" height="14.819" viewBox="0 0 14.819 14.819">
                         <g id="Edit_Icon" transform="translate(-779.261 -1011.304)">
@@ -72,8 +103,10 @@ $theme_dir = get_theme_file_uri();
                             </g>
                         </g>
                     </svg>
-
                 </a>
+
+                <?php endif; ?>
+
             </div>
         </div>
 
@@ -85,14 +118,11 @@ $theme_dir = get_theme_file_uri();
                     <path id="Arrow_Icon" d="M0,0V8H8V7.018H1.677L7.994.7,7.3.006.983,6.323V0Z"
                         transform="translate(0 8) rotate(-90)" fill="#ef4123"></path>
                 </svg>
-                <p class="text-[14px] text-red uppercase font-medium ">SKONTAKTUJ SIĘ</p>
+                <p class="text-[14px] text-red uppercase font-medium "><?php the_field('cta_label', 'option') ?></p>
             </div>
             <div>
                 <div>
-                    <p class="text-[14px] lg:fluid-text-base">Nazywam się Jarosław Grycaj i jako właściciel dbam do
-                        ciągły
-                        rozwój studia oraz nadzoruję pracę moich podwykonawców. Każdy projekt, który trafia do klienta
-                        uprzednio weryfikuję w trosce o zapewnienie najwyższej jakości.
+                    <p class="text-[14px] lg:fluid-text-base"><?php the_field('cta_content', 'option') ?>
                     </p>
                     <div class="divider border-b-[2px] dark:border-dark border-lightmode_ef lg:hidden max-lg:mt-[24px]">
                     </div>

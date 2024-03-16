@@ -23,7 +23,10 @@ $theme_dir = get_theme_file_uri();
         <div class="flex items-center w-full mt-[20px] lg:mt-0">
             <div class="border-[1px] dark:border-dark border-lightmode_ef w-full"></div>
             <div class="pl-6">
-                <img class="lg:min-w-[14px]" src="arrow-down.svg" alt="" />
+                <svg width="14.993" height="14.993" viewBox="0 0 14.993 14.993">
+                    <path id="Arrow_Down" d="M0,0V10.6H10.6V9.3H2.223L10.594.929,9.674.008,1.3,8.38V0Z"
+                        transform="translate(0 7.496) rotate(-45)" fill="#777"></path>
+                </svg>
             </div>
         </div>
     </div>

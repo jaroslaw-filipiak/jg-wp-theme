@@ -14,7 +14,6 @@
 <!-- testimonials slider -->
 <?php get_template_part('partials/global/testimonials'); ?>
 
-
 <!-- logos slider -->
 <?php get_template_part('partials/global/logos'); ?>
 
