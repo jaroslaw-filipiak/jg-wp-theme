@@ -10,8 +10,8 @@
  * @package grafikonline
  */
 
-$fb_link = get_field('facebook', 'option');
-$linkedin_link = get_field('linkedin', 'option');
+$fb_link = get_field('facebook_url', 'option');
+$linkedin_link = get_field('linkedin_link', 'option');
 
 ?>
 
@@ -24,12 +24,7 @@ $linkedin_link = get_field('linkedin', 'option');
                 firmowe</h3>
             <p
                 class="text-dark2 xl:dark:text-light text-lightmode_texttext-[14px] mb-[26px] xl:mb-[36px] xl:text-[16px] leading-[28px]">
-                Studio
-                Graficzne
-                Jarosław Grycaj <br class="hidden lg:block" /> ul. Księcia Witolda 49/15, Wrocław<br
-                    class="hidden lg:block" /> NIP:
-                886
-                299 77 74, REGON: 367 151 192</p>
+                <?php the_field('company_info', 'option') ?>
             <div>
                 <ul class="footer__links mb-[24px] lg:flex-row lg:items-start lg:justify-between xl:justify-start">
                     <div class="flex flex-col ">
@@ -140,6 +135,9 @@ $linkedin_link = get_field('linkedin', 'option');
         <div
             class="w-full xl:w-4/12  2xl:w-full 2xl:min-w-[488px] 2xl:max-w-[488px] mt-[36px] lg:mt-0 lg:pl-10 xl:pl-20 2xl:pl-[124px] xl:border-r-2 xl:dark:border-dark border-lightmode_ef">
             <h3 class="text-[18px] dark:text-light text-lightmode_textmb-[24px] xl:text-[20px] xl:mb-[93px]">Oferta</h3>
+
+
+
             <ul class="footer__links mb-[24px]">
                 <li class="group"><a class="flex items-center gap-[22px] group-hover:text-red group-hover:underline"
                         href="<?php echo get_home_url('', 'projektowanie-logo') ?>"><svg
@@ -169,9 +167,9 @@ $linkedin_link = get_field('linkedin', 'option');
         <div class="w-full 2xl:w-full  xl:w-4/12 xl:pl-20 2xl:pl-[147px]">
             <h3 class="text-[18px] dark:text-light text-lightmode_textmt-[24px] lg:mt-0 xl:text-[20px] xl:mb-[93px]">
                 Zamów Projekt</h3>
-            <p class="text-dark2 text-[14px] xl:text-[16px] xl:dark:text-light text-lightmode_textmt-[36px]">Godziny
-                pracy Studia <br />
-                PN - PT - 9:00 - 16:00</p>
+            <p class="text-dark2 text-[14px] xl:text-[16px] xl:dark:text-light text-lightmode_textmt-[36px]">
+                <?php the_field('working_hours', 'option') ?>
+            </p>
             <div class="xl:mt-[56px]">
 
                 <a href="<?php echo get_home_url('', 'kontakt') ?>"

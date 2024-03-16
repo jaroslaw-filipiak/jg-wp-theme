@@ -1,0 +1,99 @@
+{
+    "key": "group_65f58ca5e3255",
+    "title": "Dane Firmowe",
+    "fields": [
+        {
+            "key": "field_65f58ca68b46a",
+            "label": "Dane firmowe (footer 1 kolumna)",
+            "name": "company_info",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "Studio Graficzne Jarosław Grycaj <br class=\"hidden lg:block\" \/> \r\nul. Księcia Witolda 49\/15, Wrocław<br class=\"hidden lg:block\" \/> \r\nNIP: 886 299 77 74, REGON: 367 151 192",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_65f590acb7969",
+            "label": "Godziny pracy studia (Footer kolumna 3)",
+            "name": "working_hours",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "11Godziny pracy Studia <br \/>\r\nPN - PT - 9:00 - 16:00<\/p>",
+            "maxlength": "",
+            "rows": 2,
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_65f58d348b46b",
+            "label": "Facebook link",
+            "name": "facebook_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_65f58d4e8b46c",
+            "label": "LinkedIn Link",
+            "name": "linkedin_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "dane-firmowe"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1710592293
+}

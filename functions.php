@@ -48,13 +48,7 @@ function grafikonline_setup()
 		*/
 	add_theme_support('post-thumbnails');
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus(
-		array(
-			'menu-1' => esc_html__('Primary', 'grafikonline'),
-		)
-	);
-
+	
 	/*
 		* Switch default core markup for search form, comment form, and comments
 		* to output valid HTML5.
@@ -230,3 +224,10 @@ add_filter( 'upload_mimes', 'enable_svg_upload', 10, 1 );
  */
 
  require get_template_directory() . '/inc/post-types.php';
+
+ 
+/**
+ * MENU AREAS
+ */
+
+//  require get_template_directory() . '/inc/menu-areas.php';

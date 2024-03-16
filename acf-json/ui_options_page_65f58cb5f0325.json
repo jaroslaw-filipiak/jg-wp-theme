@@ -1,0 +1,23 @@
+{
+    "key": "ui_options_page_65f58cb5f0325",
+    "title": "Dane Firmowe",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Dane Firmowe",
+    "menu_slug": "dane-firmowe",
+    "parent_slug": "options",
+    "advanced_configuration": false,
+    "icon_url": "",
+    "menu_title": "",
+    "position": null,
+    "redirect": false,
+    "description": "",
+    "update_button": "Aktualizuj",
+    "updated_message": "Ustawienia zostały zaktualizowane",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": false,
+    "_parent": 16,
+    "modified": 1710591157
+}
