@@ -231,3 +231,9 @@ add_filter( 'upload_mimes', 'enable_svg_upload', 10, 1 );
  */
 
 //  require get_template_directory() . '/inc/menu-areas.php';
+
+/**
+ * BREADCRUMBS
+ */
+
+ require get_template_directory() . '/inc/breadcrumbs.php';

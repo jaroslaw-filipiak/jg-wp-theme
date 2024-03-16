@@ -9,7 +9,7 @@
 <?php get_template_part('partials/landing/landing-who-we-are'); ?>
 
 <!-- TODO: testimonials -->
-<?php get_template_part('partials/global/testimonials'); ?>
+<?php // get_template_part('partials/global/testimonials'); ?>
 <?php get_template_part('partials/global/logos'); ?>
 
 <?php get_template_part('partials/global/cta'); ?>
