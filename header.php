@@ -58,7 +58,7 @@ $is_home = is_front_page() || is_home();
     <?php endif; ?>
 
     <!--  landings -->
-    <?php if (is_page_template('page-templates/landing-websites.php') || is_page_template('page-templates/landing-projects.php') || is_page_template('page-templates/landing-logo.php')) : ?>
+    <?php if (is_page_template('page-templates/landing-page.php') ): ?>
     <script type="module" crossorigin src="<?php echo get_theme_file_uri() ?>/dist/js/websites.js"></script>
 
     <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/pricing-module.js">
