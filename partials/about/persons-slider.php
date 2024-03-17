@@ -62,20 +62,23 @@ $theme_dir = get_theme_file_uri();
                         <div class="person-slider__work text-[16px] hidden lg:flex max-lg:mt-[32px]"><?php echo $role ?>
                         </div>
                         <div
-                            class="open-person open-person-<?php echo $i; ?> btn btn--dark dark:max-lg:bg-red max-md:w-full mt-[24px] max-w-[126px] lg:max-w-[164px] cursor-pointer">
+                            class="open-person open-person-<?php echo $i; ?> btn btn--dark dark:max-lg:bg-red max-md:w-full mt-[24px] max-w-[126px] lg:max-w-[164px] cursor-pointer group">
                             <span>Więcej</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="13.708" height="10.219"
                                 viewBox="0 0 13.708 10.219">
                                 <g id="Więcej_Icon" transform="translate(-782.5 -1015.043)">
                                     <line id="Line_6" data-name="Line 6" x2="13.708"
-                                        transform="translate(782.5 1015.793)" fill="none" stroke="#f9f2e5"
-                                        stroke-width="1.5" />
+                                        transform="translate(782.5 1015.793)" fill="none" stroke-width="1.5"
+                                        class="dark:stroke-[#f9f2e5] stroke-[#1E1E1E] group-hover:stroke-[#f9f2e5]">
+                                    </line>
                                     <line id="Line_7" data-name="Line 7" x2="13.708"
-                                        transform="translate(782.5 1020.153)" fill="none" stroke="#f9f2e5"
-                                        stroke-width="1.5" />
+                                        transform="translate(782.5 1020.153)" fill="none" stroke-width="1.5"
+                                        class="dark:stroke-[#f9f2e5] stroke-[#1E1E1E] group-hover:stroke-[#f9f2e5]">
+                                    </line>
                                     <line id="Line_8" data-name="Line 8" x2="6.294"
-                                        transform="translate(782.5 1024.512)" fill="none" stroke="#f9f2e5"
-                                        stroke-width="1.5" />
+                                        transform="translate(782.5 1024.512)" fill="none" stroke-width="1.5"
+                                        class="dark:stroke-[#f9f2e5] stroke-[#1E1E1E] group-hover:stroke-[#f9f2e5]">
+                                    </line>
                                 </g>
                             </svg>
                         </div>

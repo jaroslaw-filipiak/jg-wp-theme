@@ -23,7 +23,7 @@ $theme_dir = get_theme_file_uri();
                             transform="translate(0 8) rotate(-90)" fill="#777777" />
                     </svg>
                     <p class="text-[12px] lg:text-[14px]  text-gray uppercase font-medium ">
-                        <?php the_field( 'who_we_are_label' ); ?></p>
+                        Kim jesteśmy ?</p>
                 </div>
             </div>
             <!-- label -->

@@ -12,6 +12,7 @@
 
 $theme_dir = get_theme_file_uri();
 $is_home = is_front_page() || is_home();
+$is_404 = is_404();
 
 ?>
 <!doctype html>
@@ -21,13 +22,18 @@ $is_home = is_front_page() || is_home();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <link rel="icon" type="image/svg+xml" href="<?php echo $theme_dir ?>/logo.svg" />
+    <link rel="icon" type="image/svg+xml" href="<?php echo $theme_dir ?>/dist/logo.svg" />
 
     <!-- global styles -->
     <link rel="stylesheet" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/global-module.css">
 
     <!-- pricing -->
     <link rel="modulepreload" crossorigin href="<?php echo get_theme_file_uri() ?>/dist/js/modulepreload-polyfill.js">
+
+    <!-- 404 -->
+    <?php if ($is_404) : ?>
+    <script type="module" crossorigin src="<?php echo get_theme_file_uri() ?>/dist/js/main.js"></script>
+    <?php endif; ?>
 
     <!-- front page -->
     <?php if (is_front_page() || is_home()) : ?>
@@ -84,14 +90,14 @@ $is_home = is_front_page() || is_home();
     </header>
 
     <section
-        class="content dark:dark:text-light text-lightmode_text flex items-start justify-start relative <?php echo $is_home ? 'pt-[50px]' : 'pt-[60px] lg:pt-[128px]' ?> ">
+        class="content dark:dark:text-light text-lightmode_text flex items-start justify-start relative <?php echo $is_home || $is_404 ? 'pt-[50px]' : 'pt-[60px] lg:pt-[128px]' ?> ">
 
         <!-- aside -->
         <?php get_template_part('partials/global/aside'); ?>
 
         <!-- pt conditionally -->
         <main
-            class="<?php echo $is_home ? 'pt-[93px] lg:pt-[171px] z-50 w-full max-w-[100vw] overflow-hidden' : 'z-50 w-full main-not-homepage' ?>">
+            class="<?php echo $is_home || $is_404 ? 'pt-[93px] lg:pt-[171px] z-50 w-full max-w-[100vw] overflow-hidden' : 'z-50 w-full main-not-homepage' ?>">
 
             <!-- breadcrumbs -->
-            <?php $is_home ? null : get_template_part('partials/global/breadcrumbs'); ?>
+            <?php $is_home || $is_404 ? null : get_template_part('partials/global/breadcrumbs'); ?>

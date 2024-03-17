@@ -1,13 +1,13 @@
 {
-    "key": "group_65f58ca5e3255",
-    "title": "Dane Firmowe",
+    "key": "group_65f6a5ed06204",
+    "title": "Kontakt",
     "fields": [
         {
-            "key": "field_65f58ca68b46a",
-            "label": "Dane firmowe (footer 1 kolumna)",
-            "name": "company_info",
+            "key": "field_65f6a5eefb12c",
+            "label": "Kontakt box",
+            "name": "",
             "aria-label": "",
-            "type": "textarea",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,18 +16,15 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Studio Graficzne Jarosław Grycaj <br class=\"hidden lg:block\" \/> \r\nul. Księcia Witolda 49\/15, Wrocław<br class=\"hidden lg:block\" \/> \r\nNIP: 886 299 77 74, REGON: 367 151 192",
-            "maxlength": "",
-            "rows": 3,
-            "placeholder": "",
-            "new_lines": ""
+            "placement": "top",
+            "endpoint": 0
         },
         {
-            "key": "field_65f590acb7969",
-            "label": "Godziny pracy studia (Footer kolumna 3)",
-            "name": "working_hours",
+            "key": "field_65f6a60efb12d",
+            "label": "Zdjęcie",
+            "name": "contact_box_photo",
             "aria-label": "",
-            "type": "textarea",
+            "type": "image",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -36,50 +33,21 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "11Godziny pracy Studia <br \/>\r\nPN - PT - 9:00 - 16:00<\/p>",
-            "maxlength": "",
-            "rows": 2,
-            "placeholder": "",
-            "new_lines": ""
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         },
         {
-            "key": "field_65f58d348b46b",
-            "label": "Facebook link",
-            "name": "facebook_url",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_65f58d4e8b46c",
-            "label": "LinkedIn Link",
-            "name": "linkedin_link",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_65f6bd4bfb45c",
-            "label": "Telefon",
-            "name": "phone",
+            "key": "field_65f6ac97fb12e",
+            "label": "Heading",
+            "name": "contact_box_heading",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -90,16 +58,16 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "+48 794 348 972",
+            "default_value": "",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
-            "key": "field_65f6bd55fb45d",
-            "label": "Email",
-            "name": "email",
+            "key": "field_65f6acacfb12f",
+            "label": "Label",
+            "name": "contact_box_label",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -110,19 +78,55 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "biuro@grafikonline.pl",
+            "default_value": "",
             "maxlength": "",
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_65f6acd1fb130",
+            "label": "Content",
+            "name": "contact_box_content",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_65f6acfafb131",
+            "label": "Przycisk (Zamów projekt)",
+            "name": "contact_box_btn_order",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
         }
     ],
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "post_template",
                 "operator": "==",
-                "value": "dane-firmowe"
+                "value": "page-templates\/contact.php"
             }
         ]
     ],
@@ -135,5 +139,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710669215
+    "modified": 1710665024
 }

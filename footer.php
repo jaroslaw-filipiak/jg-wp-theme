@@ -20,10 +20,9 @@ $linkedin_link = get_field('linkedin_link', 'option');
         <!-- 1 -->
         <div
             class="w-full xl:w-4/12  2xl:min-w-[460px] 2xl:max-w-[460px] lg:pr-10 xl:pr-12 xl:border-r-2 xl:dark:border-dark border-lightmode_ef">
-            <h3 class="text-[18px] dark:text-light text-lightmode_textmb-[36px] xl:mb-[93px] xl:text-[20px]">Dane
+            <h3 class="text-[18px] dark:text-light text-lightmode_text mb-[36px] xl:mb-[93px] xl:text-[20px]">Dane
                 firmowe</h3>
-            <p
-                class="text-dark2 xl:dark:text-light text-lightmode_texttext-[14px] mb-[26px] xl:mb-[36px] xl:text-[16px] leading-[28px]">
+            <p class="text-dark2 xl:dark:text-light  text-[14px] mb-[26px] xl:mb-[36px] xl:text-[16px] leading-[28px]">
                 <?php the_field('company_info', 'option') ?>
             <div>
                 <ul class="footer__links mb-[24px] lg:flex-row lg:items-start lg:justify-between xl:justify-start">
@@ -70,7 +69,7 @@ $linkedin_link = get_field('linkedin_link', 'option');
                                 <!-- svg for mobile -->
                                 <svg class=" -rotate-90 w-[11px] lg:hidden" xmlns="http://www.w3.org/2000/svg"
                                     viewBox="0 0 14.993 14.993">
-                                    <path class="dark:fill-[#f9f2e5] fill:lightmode_text" id="Arrow_Down"
+                                    <path class="fill-light" id="Arrow_Down"
                                         d="M0,0V10.6H10.6V9.3H2.223L10.594.929,9.674.008,1.3,8.38V0Z"
                                         transform="translate(0 7.496) rotate(-45)"></path>
                                 </svg>
@@ -134,7 +133,8 @@ $linkedin_link = get_field('linkedin_link', 'option');
         <!-- 2 -->
         <div
             class="w-full xl:w-4/12  2xl:w-full 2xl:min-w-[488px] 2xl:max-w-[488px] mt-[36px] lg:mt-0 lg:pl-10 xl:pl-20 2xl:pl-[124px] xl:border-r-2 xl:dark:border-dark border-lightmode_ef">
-            <h3 class="text-[18px] dark:text-light text-lightmode_textmb-[24px] xl:text-[20px] xl:mb-[93px]">Oferta</h3>
+            <h3 class="text-[18px] dark:text-light text-lightmode_text mb-[24px] xl:text-[20px] xl:mb-[93px]">Oferta
+            </h3>
 
 
 
@@ -165,7 +165,7 @@ $linkedin_link = get_field('linkedin_link', 'option');
         </div>
         <!-- 3 -->
         <div class="w-full 2xl:w-full  xl:w-4/12 xl:pl-20 2xl:pl-[147px]">
-            <h3 class="text-[18px] dark:text-light text-lightmode_textmt-[24px] lg:mt-0 xl:text-[20px] xl:mb-[93px]">
+            <h3 class="text-[18px] dark:text-light text-lightmode_text mt-[24px] lg:mt-0 xl:text-[20px] xl:mb-[93px]">
                 Zamów Projekt</h3>
             <p class="text-dark2 text-[14px] xl:text-[16px] xl:dark:text-light text-lightmode_textmt-[36px]">
                 <?php the_field('working_hours', 'option') ?>

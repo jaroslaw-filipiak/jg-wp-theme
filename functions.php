@@ -237,3 +237,9 @@ add_filter( 'upload_mimes', 'enable_svg_upload', 10, 1 );
  */
 
  require get_template_directory() . '/inc/breadcrumbs.php';
+
+ /**
+ * ADMIN PANEL
+ */
+
+ require get_template_directory() . '/inc/admin-panel.php';
