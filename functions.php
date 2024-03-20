@@ -200,7 +200,44 @@ add_action("rest_api_init", function () {
 		},
 		'permission_callback' => '__return_true'
 	]);
+
+	register_rest_route("options", "/rabats", [
+		"methods" => "GET",
+		"callback" => function ($request) {
+			$data = get_field('rabat_codes', 'options');
+			$modified_data = array_map(function ($item, $index) {
+				$item = ['id' => $index] + $item; // Add ID as first property
+				return $item;
+			}, $data, array_keys($data));
+			return $modified_data;
+		},
+		'permission_callback' => '__return_true'
+	]);
+
+	register_rest_route("options", "/rabats/(?P<code>[a-zA-Z0-9]+)", [
+		"methods" => "GET",
+		"callback" => function ($request) {
+			$code = $request->get_param('code');
+			$data = get_field('rabat_codes', 'options');
+			
+			$result = array_filter($data, function ($item) use ($code) {
+				return $item['kod'] === $code;
+			});
+
+			if (empty($result)) {
+				return new WP_Error('code_not_found', 'Code not found', array('status' => 404));
+			}
+
+			return [
+				'message'=> 'ok',
+				'data' => array('status'=> 200, 'result' => $result),
+			];
+		},
+		'permission_callback' => '__return_true'
+	]);
 });
+
+
 
 
 /**

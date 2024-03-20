@@ -1,0 +1,23 @@
+{
+    "key": "ui_options_page_65fb524d25e50",
+    "title": "Kody rabatowe",
+    "active": true,
+    "menu_order": 0,
+    "page_title": "Kody rabatowe",
+    "menu_slug": "kody-rabatowe",
+    "parent_slug": "options",
+    "advanced_configuration": false,
+    "icon_url": "",
+    "menu_title": "",
+    "position": null,
+    "redirect": false,
+    "description": "",
+    "update_button": "Aktualizuj",
+    "updated_message": "Ustawienia zostały zaktualizowane",
+    "capability": "edit_posts",
+    "data_storage": "options",
+    "post_id": "",
+    "autoload": false,
+    "_parent": 16,
+    "modified": 1710969421
+}
